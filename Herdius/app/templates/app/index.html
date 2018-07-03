@@ -1,0 +1,46 @@
+{% extends "app/layout.html" %}
+
+{% block content %}
+
+<div class="jumbotron">
+    <h1>Welcome to the Herdius ICO!</h1>
+    <p class="lead">Register to be part of the upcoming Herdius public ICO which is scheduled to happen 2018.The Herdius pre-sale is ongoing and is handled separately. Please reach out to ir@herdius.com for participating and further details.By registering on the Herdius ICO website it will be possible for you to refer others to the ICO and gain a bonus based on their token purchase. We also want to reward interactions that are happening on our social media channels, joining and being active in our community is also rewarded!</p>
+    <p><button class="btn btn-primary btn-large" id="registerNewUser">Register &raquo;</button></p>
+    <p><a href="https://www.djangoproject.com/" class="btn btn-primary btn-large">Sign in &raquo;</a></p>
+</div>
+
+<div class="row">
+    <div class="col-md-8">
+            <script src='https://www.google.com/recaptcha/api.js'></script>
+    <div class="g-recaptcha" data-sitekey="6LdRAmIUAAAAAMuzveig6oGUVTG60xMCpx-2dBTd"></div>
+    </div>
+</div>
+<script>
+    $(document).ready(function(){
+     function csrfSafeMethod(method) {
+                    // these HTTP methods do not require CSRF protection
+                    return (/^(GET|HEAD|OPTIONS|TRACE)$/.test(method));
+                }
+   
+    $('#registerNewUser').click(function () {
+    $.ajaxSetup({
+                    beforeSend: function(xhr, settings) {
+                        if (!csrfSafeMethod(settings.type) && !this.crossDomain) {
+                            xhr.setRequestHeader("X-CSRFToken", '{{ csrf_token }}');
+                        }
+                    }
+
+                });
+        $.ajax({
+           url: "{% url 'register' %}",
+           type: "post", // or "get"
+           contentType: "application/x-www-form-urlencoded;charset=utf-8",
+           dataType: 'json',
+           data: {'csrfmiddlewaretoken': '{{ csrf_token }}', "username": "UserName3", "first_name": "Name","last_name": "SName", "adress": "adress 12 asd5", 
+                  "postal_code": "1212121", "country": "USA", "phone": "+368541669", "bday": "2000-12-12", "email": "mail@na.com", "password": "mypassword", "recapcha":grecaptcha.getResponse()},
+           success: function(data) {
+           alert(data['result'])
+    }});
+     }); });
+</script>
+{% endblock %}
