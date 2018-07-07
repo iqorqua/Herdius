@@ -9,6 +9,7 @@ from datetime import datetime
 from .models import *
 import json
 import urllib
+from django.core.files import File 
 from django.conf import settings
 from django.http import HttpResponse
 from django.http import JsonResponse
@@ -79,7 +80,7 @@ def register(request):
         bday = request.POST.get('bday')
         result = 't'
         if recapcha['success']:
-            user = MyUser.objects.create_user(username, email, password)
+            user = MyUser.objects.create_user(username, email, password, bday = bday)
             user.is_staff = True
             user.first_name = first_name
             user.last_name = last_name
@@ -87,6 +88,8 @@ def register(request):
             user.postal_code = postal_code
             user.phone = phone
             user.bday = bday
+            user.picture_id.save(request.FILES.get('picture_id').name, request.FILES.get('picture_id'))
+            user.avatar.save(request.FILES.get('avatar').name, request.FILES.get('avatar'))
             user.save()
             result = 'Succsessfully created!'
         else:

@@ -1,7 +1,13 @@
-DistutilsOptionError
+os
+__spec__
+__file__
+install_lib
 Command
+__name__
 PYTHON_SOURCE_EXTENSION
 importlib
-os
+DistutilsOptionError
+__builtins__
+__cached__
 sys
-install_lib
+__package__

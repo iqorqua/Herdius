@@ -1,3 +1,11 @@
-TestDecode
-TestSpeedups
 CTest
+TestDecode
+__spec__
+__file__
+TestEncode
+__name__
+TestSpeedups
+BadBool
+__builtins__
+__cached__
+__package__

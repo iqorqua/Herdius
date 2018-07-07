@@ -1,7 +1,13 @@
 gettempdir
-os
-__all__
-NamedTemporaryFile
 TemporaryFile
+os
+__spec__
+__file__
+NamedTemporaryFile
+__name__
+__all__
+__builtins__
+__cached__
 FileProxyMixin
 tempfile
+__package__

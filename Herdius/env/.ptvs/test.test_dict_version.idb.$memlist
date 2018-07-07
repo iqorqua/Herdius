@@ -1,6 +1,12 @@
-DictVersionTests
-_testcapi
-unittest
-Dict
-support
 DictSubtypeVersionTests
+_testcapi
+__spec__
+__file__
+__package__
+__name__
+support
+Dict
+__builtins__
+__cached__
+DictVersionTests
+unittest

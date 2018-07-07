@@ -2,10 +2,13 @@ TestAsciiFileShelve
 glob
 L1
 TestBinaryMemShelve
-dbm_iterator
 TestBinaryFileShelve
-TestCase
+dbm_iterator
+MutableMapping
+__file__
+unittest
 support
+__package__
 TestAsciiMemShelve
 TestShelveBase
 TestProto2FileShelve
@@ -13,6 +16,9 @@ test_main
 shelve
 TestProto2MemShelve
 byteskeydict
-MutableMapping
-unittest
+__name__
+__builtins__
+TestCase
+__cached__
 mapping_tests
+__spec__

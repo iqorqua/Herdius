@@ -1,13 +1,17 @@
 clone_feature
 c_int_p
 get_layer_count
+get_field_as_string
 feature_equal
 get_feat_name
+__spec__
 const_string_output
 destroy_feature
 c_void_p
 get_field_type
 set_spatial_filter_rect
+__package__
+__name__
 get_ds_name
 c_double
 srs_output
@@ -30,9 +34,10 @@ get_driver_count
 get_field_as_datetime
 test_capability
 lgdal
+__file__
 get_field_count
 get_feat_field_defn
-get_field_as_string
+__builtins__
 get_layer_defn
 get_layer_srs
 double_output
@@ -50,6 +55,7 @@ get_field_as_integer
 register_all
 get_feat_geom_ref
 get_extent
+__cached__
 get_field_precision
 reset_reading
 get_field_as_integer64
@@ -57,8 +63,8 @@ get_layer
 get_layer_by_name
 get_spatial_filter
 OGREnvelope
-release_ds
 int64_output
+release_ds
 geom_output
 POINTER
 get_feature_count

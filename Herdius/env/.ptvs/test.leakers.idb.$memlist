@@ -1,2 +1,9 @@
-test_ctypes
 test_selftype
+__spec__
+__cached__
+__path__
+__name__
+test_ctypes
+__builtins__
+__file__
+__package__

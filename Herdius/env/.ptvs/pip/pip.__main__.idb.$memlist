@@ -1,5 +1,11 @@
-absolute_import
-path
 pip
-sys
+__spec__
+absolute_import
+__file__
+__name__
 os
+__builtins__
+__cached__
+path
+sys
+__package__

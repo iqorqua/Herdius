@@ -1,5 +1,11 @@
+f
+__spec__
+__file__
+modname
+__package__
 multiprocessing
 proc
-modname
+__builtins__
+__cached__
 ctx
-f
+__name__

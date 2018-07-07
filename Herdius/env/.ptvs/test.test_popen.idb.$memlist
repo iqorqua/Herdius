@@ -1,6 +1,12 @@
-sys
 PopenTest
-unittest
-python
-support
 os
+__spec__
+__file__
+__package__
+__name__
+support
+python
+__builtins__
+__cached__
+sys
+unittest

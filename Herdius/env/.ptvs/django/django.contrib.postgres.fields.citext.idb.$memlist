@@ -2,7 +2,13 @@ CICharField
 CharField
 EmailField
 __all__
-CIText
-CITextField
-TextField
+__spec__
+__file__
 CIEmailField
+__name__
+CITextField
+CIText
+__builtins__
+__cached__
+TextField
+__package__

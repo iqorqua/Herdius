@@ -1,5 +1,11 @@
 Protocol
-SubprocessProtocol
+__spec__
 __all__
-DatagramProtocol
+__file__
 BaseProtocol
+__name__
+SubprocessProtocol
+__builtins__
+__cached__
+DatagramProtocol
+__package__

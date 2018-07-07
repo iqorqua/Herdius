@@ -1,4 +1,10 @@
-nested_scopes
-foo
 result
 f
+__spec__
+__file__
+__name__
+foo
+nested_scopes
+__builtins__
+__cached__
+__package__

@@ -1,4 +1,10 @@
-copy
-force_text
-force_str
 Node
+copy
+__spec__
+__file__
+force_str
+__name__
+__builtins__
+__cached__
+force_text
+__package__

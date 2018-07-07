@@ -1,6 +1,12 @@
-tk
-PasteTest
-unittest
-ttk
 pyshell
+ttk
+__spec__
+__file__
+tk
+unittest
+__name__
+__builtins__
+__cached__
 requires
+PasteTest
+__package__

@@ -1,5 +1,11 @@
-PyPIRCCommand
-RawConfigParser
-Command
 DEFAULT_PYPIRC
 os
+__spec__
+__file__
+Command
+__name__
+RawConfigParser
+__builtins__
+__cached__
+PyPIRCCommand
+__package__

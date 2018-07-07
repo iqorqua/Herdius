@@ -1,3 +1,9 @@
-macurl2path
+__spec__
+__file__
 unittest
+__name__
+__builtins__
+__cached__
+macurl2path
 MacUrl2PathTestCase
+__package__

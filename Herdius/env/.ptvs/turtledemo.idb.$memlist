@@ -6,8 +6,13 @@ __doc__
 fractalcurves
 planet_and_moon
 chaos
+__main__
+__builtins__
 tree
+__file__
+__cached__
 yinyang
+__path__
 wikipedia
 clock
 two_canvases
@@ -15,7 +20,9 @@ forest
 paint
 lindenmayer
 round_dance
-__main__
+__name__
 minimal_hanoi
 colormixer
+__spec__
+__package__
 nim

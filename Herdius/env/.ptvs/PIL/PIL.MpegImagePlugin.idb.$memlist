@@ -1,6 +1,12 @@
 ImageFile
-Image
-MpegImageFile
-i8
+__spec__
+__file__
 __version__
+i8
+__name__
 BitStream
+__builtins__
+__cached__
+MpegImageFile
+Image
+__package__

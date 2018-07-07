@@ -1,7 +1,13 @@
 TestScriptHelperEnvironment
 script_helper
-TestScriptHelper
+__spec__
+__file__
+unittest
+__package__
 subprocess
 mock
+__builtins__
+__cached__
+TestScriptHelper
 sys
-unittest
+__name__

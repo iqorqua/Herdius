@@ -1,3 +1,9 @@
 run
-sys
+__spec__
+__file__
+__name__
 tokenize
+__builtins__
+__cached__
+sys
+__package__

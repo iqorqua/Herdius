@@ -1,9 +1,15 @@
 __warningregistry__
 RLock
-contextmanager
 __all__
+contextmanager
+__spec__
+__file__
 local
+__name__
 _localimpl
-ref
 current_thread
+ref
+__builtins__
+__cached__
 _patch
+__package__

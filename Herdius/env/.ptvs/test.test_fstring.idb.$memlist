@@ -1,6 +1,12 @@
+TestCase
+ast
+__spec__
+__file__
 a_global
 unittest
-ast
+__name__
 types
-TestCase
+__builtins__
+__cached__
 decimal
+__package__

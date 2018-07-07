@@ -7,10 +7,13 @@ fix_ne
 fix_long
 fix_has_key
 fix_methodattrs
+__package__
 fix_input
 fix_buffer
+__name__
 fix_repr
 fix_raw_input
+__cached__
 fix_apply
 fix_ws_comma
 fix_metaclass
@@ -25,10 +28,13 @@ fix_renames
 fix_operator
 fix_reload
 fix_unicode
+__file__
 fix_sys_exc
 fix_standarderror
+__builtins__
 fix_filter
 fix_exec
+__spec__
 fix_getcwdu
 fix_reduce
 fix_isinstance
@@ -46,6 +52,7 @@ fix_funcattrs
 fix_numliterals
 fix_basestring
 fix_idioms
+__path__
 fix_map
 fix_itertools_imports
 fix_xreadlines

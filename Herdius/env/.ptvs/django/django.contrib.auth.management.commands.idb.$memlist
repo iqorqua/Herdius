@@ -1,2 +1,12 @@
+getpass
+__spec__
+__file__
+sys
+__path__
+__name__
 createsuperuser
+__builtins__
+__cached__
 changepassword
+__future__
+__package__

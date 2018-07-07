@@ -1,7 +1,13 @@
 Node
 Name
-ArgList
 syms
-fixer_base
+__spec__
+__file__
+__name__
 FixZip
+fixer_base
+ArgList
+__builtins__
+__cached__
 in_special_context
+__package__

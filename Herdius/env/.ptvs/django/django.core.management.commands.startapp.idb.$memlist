@@ -1,4 +1,10 @@
-TemplateCommand
-Command
-import_module
 CommandError
+__spec__
+__file__
+import_module
+TemplateCommand
+__name__
+__builtins__
+__cached__
+Command
+__package__

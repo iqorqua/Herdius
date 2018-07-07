@@ -1,8 +1,8 @@
 time
-asyncio
 SIGNING_CA
-TimerTests
-unittest
+asyncio
+MyReadPipeProto
+errno
 collections
 threading
 platform
@@ -10,7 +10,9 @@ socket
 signal
 EventLoopTestsMixin
 AbstractEventLoopTests
+__package__
 noop
+__name__
 mock
 proactor_events
 KqueueEventLoopTests
@@ -27,13 +29,15 @@ tty
 ONLYKEY
 selectors
 ONLYCERT
-PollEventLoopTests
+__file__
 re
 sslproto
-MyReadPipeProto
-errno
+TimerTests
+unittest
+__builtins__
 io
 subprocess
+__spec__
 ssl
 MyBaseProto
 data_file
@@ -44,6 +48,7 @@ MyProto
 ProactorEventLoopTests
 support
 test_utils
+__cached__
 SubprocessTestsMixin
 os
 weakref
@@ -52,5 +57,6 @@ selector_events
 UnixEventLoopTestsMixin
 EPollEventLoopTests
 concurrent
+PollEventLoopTests
 gc
 SelectEventLoopTests

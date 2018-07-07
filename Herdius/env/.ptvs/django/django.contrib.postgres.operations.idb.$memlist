@@ -1,8 +1,14 @@
 UnaccentExtension
-Operation
 HStoreExtension
+Operation
+__spec__
+__file__
 CreateExtension
-TrigramExtension
+__package__
 register_type_handlers
 BtreeGinExtension
 CITextExtension
+__builtins__
+__cached__
+TrigramExtension
+__name__

@@ -5,8 +5,11 @@ tempfile
 locale
 re
 os
+run
+__builtins__
+__file__
 tkMessageBox
-encoding
+unittest
 shlex
 askstring
 coding_spec
@@ -17,7 +20,10 @@ idleConf
 codecs
 BOM_UTF8
 locale_encoding
+__name__
 blank_re
-run
+encoding
 tkFileDialog
-unittest
+__package__
+__cached__
+__spec__

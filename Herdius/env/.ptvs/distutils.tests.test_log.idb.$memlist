@@ -1,7 +1,13 @@
-log
 test_suite
+log
+__spec__
+__file__
 NamedTemporaryFile
-run_unittest
-TestLog
-sys
 unittest
+__name__
+TestLog
+__builtins__
+__cached__
+run_unittest
+sys
+__package__

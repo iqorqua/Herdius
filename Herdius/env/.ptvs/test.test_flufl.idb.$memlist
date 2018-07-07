@@ -1,3 +1,9 @@
 FLUFLTests
-unittest
+__spec__
+__file__
 __future__
+__name__
+__builtins__
+__cached__
+unittest
+__package__

@@ -1,2 +1,11 @@
 decorators
+__spec__
+__file__
+__path__
+__name__
+collections
+__builtins__
+__cached__
 main
+sys
+__package__

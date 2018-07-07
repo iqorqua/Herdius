@@ -1,6 +1,12 @@
-gc
 pickle
+gc
+__spec__
+__file__
 seq_tests
-TupleTest
+__name__
 support
+TupleTest
+__builtins__
+__cached__
 unittest
+__package__

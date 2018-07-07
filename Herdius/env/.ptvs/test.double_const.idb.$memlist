@@ -1,6 +1,12 @@
-PI_str
-TWOPI
-check_ok
 TWOPI_str
-TestFailed
+__spec__
+__file__
+check_ok
 PI
+__name__
+TestFailed
+__builtins__
+__cached__
+TWOPI
+PI_str
+__package__

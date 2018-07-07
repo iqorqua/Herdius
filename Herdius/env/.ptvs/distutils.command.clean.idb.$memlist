@@ -1,5 +1,11 @@
-clean
 log
-Command
-remove_tree
 os
+__spec__
+__file__
+Command
+__name__
+clean
+remove_tree
+__builtins__
+__cached__
+__package__

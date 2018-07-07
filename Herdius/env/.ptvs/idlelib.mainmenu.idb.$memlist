@@ -1,4 +1,10 @@
 default_keydefs
 menudefs
-idleConf
+__spec__
+__file__
 find_spec
+__name__
+idleConf
+__builtins__
+__cached__
+__package__

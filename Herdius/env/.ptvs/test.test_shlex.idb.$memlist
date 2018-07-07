@@ -1,8 +1,14 @@
 methname
+posix_data
+__spec__
+__file__
 data
-shlex
+unittest
+__name__
 string
 ShlexTest
+__builtins__
+__cached__
 io
-posix_data
-unittest
+shlex
+__package__

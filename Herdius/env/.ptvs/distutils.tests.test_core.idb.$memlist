@@ -5,7 +5,9 @@ setup_does_nothing
 os
 captured_stdout
 run_unittest
+__file__
 support
+__cached__
 io
 test
 CoreTestCase
@@ -13,5 +15,9 @@ setup_using___file__
 distutils
 test_suite
 log
+__name__
+__builtins__
 shutil
+__package__
 unittest
+__spec__

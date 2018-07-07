@@ -1,8 +1,14 @@
+TestBuglets
 TestTranforms
+__spec__
+__file__
 sys
-unittest
+__package__
+__name__
 BytecodeTestCase
 textwrap
-TestBuglets
+__builtins__
+__cached__
+unittest
 re
 dis

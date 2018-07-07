@@ -1,3 +1,9 @@
 ModeDescriptor
-_modes
+__spec__
+__file__
 getmode
+__name__
+__builtins__
+__cached__
+_modes
+__package__

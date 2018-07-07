@@ -1,5 +1,13 @@
-isStringType
-isPath
 deferred_error
 os
+__spec__
+__file__
+isStringType
+py3
+__name__
+isPath
+__builtins__
+__cached__
 isDirectory
+sys
+__package__

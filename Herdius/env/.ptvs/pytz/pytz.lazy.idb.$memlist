@@ -1,6 +1,12 @@
-RLock
 LazySet
-LazyDict
-DictMixin
-LazyList
 _fill_lock
+__spec__
+__file__
+LazyDict
+__name__
+LazyList
+RLock
+__builtins__
+__cached__
+DictMixin
+__package__

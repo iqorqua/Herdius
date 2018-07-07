@@ -1,5 +1,11 @@
 zoom_height
-re
-sys
 macosx
+__spec__
+__file__
+sys
+__name__
 ZoomHeight
+__builtins__
+__cached__
+re
+__package__

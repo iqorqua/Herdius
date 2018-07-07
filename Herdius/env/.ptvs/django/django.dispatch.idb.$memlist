@@ -1,4 +1,15 @@
-Signal
 receiver
+weakref
+threading
+__spec__
+__file__
+Signal
+__path__
+__name__
 weakref_backports
+warnings
+__builtins__
+__cached__
+sys
 dispatcher
+__package__

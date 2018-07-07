@@ -1,3 +1,10 @@
-_main
 ensurepip
+__spec__
+__file__
 argparse
+__name__
+__builtins__
+__cached__
+_main
+sys
+__package__

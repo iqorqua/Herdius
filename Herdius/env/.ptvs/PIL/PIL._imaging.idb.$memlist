@@ -69,6 +69,7 @@ set_blocks_max
 sgi_rle_decoder
 sun_rle_decoder
 tga_rle_decoder
+tga_rle_encoder
 wedge
 xbm_decoder
 xbm_encoder

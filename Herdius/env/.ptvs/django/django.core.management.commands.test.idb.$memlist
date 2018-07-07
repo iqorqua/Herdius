@@ -1,5 +1,11 @@
-Command
+BaseCommand
+__spec__
+__file__
 get_runner
 settings
+__name__
+__builtins__
+__cached__
+Command
 sys
-BaseCommand
+__package__

@@ -1,4 +1,10 @@
-NAMES
 BaseFix
-Name
+NAMES
 FixAsserts
+__spec__
+__file__
+__name__
+Name
+__builtins__
+__cached__
+__package__

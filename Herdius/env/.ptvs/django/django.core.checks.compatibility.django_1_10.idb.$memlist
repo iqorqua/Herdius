@@ -1,7 +1,13 @@
-global_settings
+Tags
+__cached__
+__spec__
 unicode_literals
 register
-Warning
-check_duplicate_middleware_settings
-Tags
 settings
+__name__
+check_duplicate_middleware_settings
+global_settings
+__builtins__
+__file__
+Warning
+__package__

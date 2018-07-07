@@ -1,6 +1,12 @@
-__version__
-Image
-olefile
-MicImageFile
-TiffImagePlugin
 _accept
+TiffImagePlugin
+__spec__
+__file__
+MicImageFile
+__version__
+__name__
+olefile
+__builtins__
+__cached__
+Image
+__package__

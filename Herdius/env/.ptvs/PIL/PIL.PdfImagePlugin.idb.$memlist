@@ -1,8 +1,14 @@
 _save_all
 ImageSequence
-PdfParser
-_save
 ImageFile
+__spec__
+__file__
+__version__
+PdfParser
+__name__
+_save
+__builtins__
+__cached__
 io
 Image
-__version__
+__package__

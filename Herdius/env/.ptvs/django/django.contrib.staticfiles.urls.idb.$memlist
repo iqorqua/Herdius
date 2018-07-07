@@ -1,5 +1,11 @@
-urlpatterns
-serve
-staticfiles_urlpatterns
-settings
 static
+serve
+__spec__
+__file__
+__package__
+__name__
+staticfiles_urlpatterns
+__builtins__
+__cached__
+urlpatterns
+settings

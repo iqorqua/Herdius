@@ -1,6 +1,12 @@
-import_tool
 skip_if_missing
-unittest
-PdepsTests
+import_tool
 os
+__spec__
+__file__
+PdepsTests
+unittest
+__name__
+__builtins__
+__cached__
 tempfile
+__package__

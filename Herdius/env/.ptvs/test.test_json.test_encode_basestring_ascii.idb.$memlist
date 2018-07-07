@@ -1,8 +1,14 @@
 CTest
 bigaddrspacetest
 TestPyEncodeBasestringAscii
+__spec__
+__file__
 TestEncodeBasestringAscii
 PyTest
-CASES
-OrderedDict
+__name__
 TestCEncodeBasestringAscii
+__builtins__
+__cached__
+OrderedDict
+CASES
+__package__

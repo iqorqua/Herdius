@@ -1,3 +1,8 @@
 BaseDatabaseCreation
-sys
+__spec__
+__file__
+__name__
 DatabaseCreation
+__builtins__
+__cached__
+__package__

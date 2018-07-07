@@ -1,6 +1,12 @@
 __builtin__
-Image
-open
-builtins
+__spec__
+__file__
 i32
+builtins
+__name__
+open
+__builtins__
+__cached__
 quake2palette
+Image
+__package__

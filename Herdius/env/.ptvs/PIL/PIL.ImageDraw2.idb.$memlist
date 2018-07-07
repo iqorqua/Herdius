@@ -1,9 +1,15 @@
 ImageDraw
 Pen
+ImagePath
+__spec__
+__file__
 ImageFont
 ImageColor
+__name__
 Brush
-ImagePath
 Draw
-Image
+__builtins__
+__cached__
 Font
+Image
+__package__

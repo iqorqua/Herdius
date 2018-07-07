@@ -1,5 +1,11 @@
-absolute_import
-BuildDirectory
 rmtree
+__spec__
+absolute_import
+__file__
+__name__
+BuildDirectory
 os
+__builtins__
+__cached__
 tempfile
+__package__

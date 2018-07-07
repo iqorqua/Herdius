@@ -9,9 +9,11 @@ FactoryTests
 machinery
 os
 util
-ModuleSpecMethodsTests
+Frozen_ModuleReprTests
+__file__
+Frozen_ModuleSpecMethodsTests
 unittest
-Source_FactoryTests
+__package__
 Source_ModuleReprTests
 init
 NewLoader
@@ -20,6 +22,10 @@ Frozen_FactoryTests
 TestLoader
 warnings
 LegacyLoader
-Frozen_ModuleReprTests
+__name__
+__builtins__
+ModuleSpecMethodsTests
+Source_FactoryTests
 ModuleSpecTests
-Frozen_ModuleSpecMethodsTests
+__cached__
+__spec__

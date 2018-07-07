@@ -5,7 +5,10 @@ unicode_literals
 router
 create_forward_many_to_many_manager
 cached_property
+__builtins__
 ManyToManyDescriptor
+__file__
+__cached__
 create_reverse_many_to_one_manager
 RemovedInDjango20Warning
 Q
@@ -14,5 +17,8 @@ signals
 transaction
 ForwardOneToOneDescriptor
 warnings
+__name__
 attrgetter
 QuerySet
+__package__
+__spec__

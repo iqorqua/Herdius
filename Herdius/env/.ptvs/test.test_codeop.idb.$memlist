@@ -1,8 +1,14 @@
 is_jython
 unify_callables
-compile_command
+__spec__
+__file__
+sys
+__package__
+__name__
 PyCF_DONT_IMPLY_DEDENT
 CodeopTests
+__builtins__
+__cached__
 io
-sys
+compile_command
 unittest

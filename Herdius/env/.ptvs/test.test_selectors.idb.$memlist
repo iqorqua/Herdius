@@ -7,8 +7,12 @@ tempfile
 EpollSelectorTestCase
 BaseSelectorTestCase
 os
+__builtins__
 ScalableSelectorMixIn
+__file__
+PollSelectorTestCase
 support
+__cached__
 signal
 socketpair
 DefaultSelectorTestCase
@@ -17,8 +21,10 @@ KqueueSelectorTestCase
 resource
 sleep
 SelectSelectorTestCase
+__name__
 find_ready_matching
 random
 socket
-PollSelectorTestCase
+__package__
 unittest
+__spec__

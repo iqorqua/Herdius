@@ -1,6 +1,12 @@
-find_lib
-dyld_find
-unittest
-MachOTest
-sys
 os
+__spec__
+__file__
+MachOTest
+unittest
+__name__
+find_lib
+__builtins__
+__cached__
+dyld_find
+sys
+__package__

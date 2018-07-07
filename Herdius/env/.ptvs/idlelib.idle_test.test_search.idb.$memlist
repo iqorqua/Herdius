@@ -1,7 +1,13 @@
-requires
-tk
-BooleanVar
 SearchDialogTest
 se
-sd
+__spec__
+__file__
+tk
 unittest
+__name__
+BooleanVar
+__builtins__
+__cached__
+requires
+sd
+__package__

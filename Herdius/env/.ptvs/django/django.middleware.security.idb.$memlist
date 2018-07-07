@@ -1,5 +1,11 @@
 HttpResponsePermanentRedirect
-settings
-re
+__spec__
+__file__
 MiddlewareMixin
+settings
+__name__
+__builtins__
+__cached__
 SecurityMiddleware
+re
+__package__

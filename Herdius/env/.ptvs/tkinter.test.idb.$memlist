@@ -1,5 +1,12 @@
-runtktests
-widget_tests
 test_tkinter
-support
 test_ttk
+__spec__
+__file__
+__path__
+__name__
+support
+runtktests
+__builtins__
+__cached__
+widget_tests
+__package__

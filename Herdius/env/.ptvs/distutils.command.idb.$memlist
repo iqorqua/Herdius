@@ -1,8 +1,13 @@
 __all__
+__path__
 build_ext
 bdist
 install_egg_info
 clean
+docutils
+__spec__
+__builtins__
+__cached__
 sdist
 bdist_msi
 install_lib
@@ -16,8 +21,11 @@ build_scripts
 install_data
 check
 build_py
+__name__
 install_headers
 bdist_wininst
+__file__
+__package__
 register
 bdist_rpm
 bdist_dumb

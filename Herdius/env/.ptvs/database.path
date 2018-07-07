@@ -1,7 +1,7 @@
-c:\program files\python36|stdlib|
-c:\program files\python36\dlls|stdlib|
-c:\program files\python36\lib|stdlib|
-c:\program files\python36\scripts|stdlib|
+c:\program files (x86)\microsoft visual studio\shared\python36_64|stdlib|
+c:\program files (x86)\microsoft visual studio\shared\python36_64\dlls|stdlib|
+c:\program files (x86)\microsoft visual studio\shared\python36_64\lib|stdlib|
+c:\program files (x86)\microsoft visual studio\shared\python36_64\scripts|stdlib|
 c:\users\igorqua\source\repos\herdius\herdius\env|stdlib|
 c:\users\igorqua\source\repos\herdius\herdius\env\lib|stdlib|
 c:\users\igorqua\source\repos\herdius\herdius\env\scripts|stdlib|

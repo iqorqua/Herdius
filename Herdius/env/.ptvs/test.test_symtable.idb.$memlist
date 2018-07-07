@@ -1,5 +1,11 @@
 TEST_CODE
+__spec__
+__file__
 SymtableTest
-unittest
-find_block
 symtable
+__name__
+__builtins__
+__cached__
+find_block
+unittest
+__package__

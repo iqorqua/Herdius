@@ -1,9 +1,15 @@
 strtod_parser
 strtod
+random
+__spec__
+__file__
 sys
 unittest
+__name__
 StrtodTests
-random
 TEST_SIZE
-re
+__builtins__
+__cached__
 test
+re
+__package__

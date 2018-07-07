@@ -1,6 +1,12 @@
-print_function
+support
+__cached__
+__spec__
 unicode_literals
 TestMultipleFeatures
-support
-sys
 unittest
+__name__
+print_function
+__builtins__
+__file__
+sys
+__package__

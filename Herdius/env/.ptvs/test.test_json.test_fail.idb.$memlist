@@ -1,7 +1,13 @@
 CTest
 JSONDOCS
-TestPyFail
-PyTest
-TestFail
 TestCFail
+__spec__
+__file__
+TestFail
+PyTest
+__name__
+__builtins__
+__cached__
+TestPyFail
 SKIPS
+__package__

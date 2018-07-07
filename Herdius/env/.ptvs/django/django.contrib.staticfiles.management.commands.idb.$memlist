@@ -1,3 +1,14 @@
 findstatic
-collectstatic
 runserver
+__spec__
+__file__
+platform
+__path__
+__name__
+collections
+os
+__builtins__
+__cached__
+__future__
+collectstatic
+__package__

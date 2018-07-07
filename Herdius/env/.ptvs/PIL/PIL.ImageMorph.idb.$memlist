@@ -1,7 +1,13 @@
 LutBuilder
 MorphOp
-re
-print_function
 LUT_SIZE
+__spec__
+__file__
+re
+__name__
+print_function
+__builtins__
+__cached__
 _imagingmorph
 Image
+__package__

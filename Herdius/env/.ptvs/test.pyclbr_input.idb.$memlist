@@ -1,4 +1,10 @@
-B
-Other
-C
 f
+B
+__spec__
+__file__
+Other
+__name__
+C
+__builtins__
+__cached__
+__package__

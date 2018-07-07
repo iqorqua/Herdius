@@ -15,6 +15,7 @@ utf_16_be
 utf_16
 euc_kr
 hp_roman8
+__path__
 mac_latin2
 _import_tail
 mac_centeuro
@@ -25,6 +26,8 @@ shift_jisx0213
 iso8859_13
 cp1252
 _cache
+__cached__
+__package__
 codecs
 unicode_escape
 mac_cyrillic
@@ -36,6 +39,7 @@ cp424
 cp950
 mac_arabic
 normalize_encoding
+search_function
 quopri_codec
 mbcs
 iso2022_jp_2004
@@ -68,6 +72,7 @@ hex_codec
 utf_32_le
 iso8859_14
 rot_13
+__builtins__
 punycode
 kz1048
 cp1125
@@ -82,6 +87,7 @@ ascii
 mac_iceland
 euc_jisx0213
 utf_7
+__spec__
 utf_32_be
 big5
 mac_greek
@@ -101,6 +107,7 @@ big5hkscs
 base64_codec
 cp437
 mac_farsi
+__name__
 bz2_codec
 cp037
 iso2022_jp_ext
@@ -115,7 +122,7 @@ iso8859_11
 cp932
 iso8859_9
 charmap
-search_function
+__file__
 koi8_r
 utf_16_le
 iso8859_2

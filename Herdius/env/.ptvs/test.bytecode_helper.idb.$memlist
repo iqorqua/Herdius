@@ -1,5 +1,11 @@
+__spec__
+__file__
 _UNSPECIFIED
-io
-unittest
-dis
+__package__
+__name__
 BytecodeTestCase
+__builtins__
+__cached__
+io
+dis
+unittest

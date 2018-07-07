@@ -1,8 +1,14 @@
 format_alias
-DistutilsOptionError
 config_file
+option_base
+DistutilsOptionError
+__spec__
+__file__
 shquote
+__name__
 alias
 map
 edit_config
-option_base
+__builtins__
+__cached__
+__package__

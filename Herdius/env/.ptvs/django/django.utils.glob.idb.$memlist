@@ -1,6 +1,13 @@
-glob_escape
 _magic_check
 six
+__cached__
+__spec__
 unicode_literals
+__name__
+escape
+glob_escape
 os
+__builtins__
+__file__
 re
+__package__

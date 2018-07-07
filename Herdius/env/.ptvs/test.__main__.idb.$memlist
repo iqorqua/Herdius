@@ -1,7 +1,13 @@
 E
 D
 C
-main
+__spec__
+__file__
 PickleTestMemIO
+__name__
 K
 H
+__builtins__
+__cached__
+main
+__package__

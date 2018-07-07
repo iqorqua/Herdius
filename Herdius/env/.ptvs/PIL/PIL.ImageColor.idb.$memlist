@@ -1,5 +1,11 @@
-getcolor
-Image
-re
-getrgb
 colormap
+getrgb
+__spec__
+__file__
+re
+__name__
+getcolor
+__builtins__
+__cached__
+Image
+__package__

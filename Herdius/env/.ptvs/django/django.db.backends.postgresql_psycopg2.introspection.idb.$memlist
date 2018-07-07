@@ -1,7 +1,11 @@
 BaseDatabaseIntrospection
-unicode_literals
+__spec__
+__file__
 force_text
-warnings
-Index
+__name__
 RemovedInDjango21Warning
+__builtins__
+__cached__
+Index
 DatabaseIntrospection
+__package__

@@ -1,8 +1,14 @@
 _curses
 key
+__spec__
+__file__
+i
 _capability_names
+__name__
 system
 L
 python
-i
+__builtins__
+__cached__
 has_key
+__package__

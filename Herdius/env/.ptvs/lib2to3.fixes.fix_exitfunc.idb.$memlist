@@ -2,8 +2,14 @@ pytree
 Name
 FixExitfunc
 Call
+__spec__
+__file__
 Attr
-fixer_base
+__name__
 Newline
+fixer_base
 syms
+__builtins__
+__cached__
 Comma
+__package__

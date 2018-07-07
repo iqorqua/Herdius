@@ -1,7 +1,13 @@
 w
+__spec__
+__file__
 warnings
+unittest
+__name__
 TestWarnings
 ws
+__builtins__
+__cached__
 warnfun
 sys
-unittest
+__package__

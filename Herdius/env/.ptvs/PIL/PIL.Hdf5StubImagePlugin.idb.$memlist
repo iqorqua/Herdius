@@ -1,7 +1,13 @@
-_accept
-HDF5StubImageFile
 _save
+_accept
 ImageFile
+__spec__
+__file__
+__name__
+HDF5StubImageFile
 register_handler
+__builtins__
+__cached__
 _handler
 Image
+__package__

@@ -1,3 +1,9 @@
+__spec__
+__file__
 test
-sys
+__name__
 runtest
+__builtins__
+__cached__
+sys
+__package__

@@ -43,6 +43,7 @@ INSTALLED_APPS = [
 ]
 
 AUTH_USER_MODEL = "app.MyUser"
+AUTH_PROFILE_MODULE = 'app.MyUser'
 GOOGLE_RECAPTCHA_SECRET_KEY = '6LdRAmIUAAAAADFYN4S5gbIvc3d83EwKLgsWU4W8'
 RECAPTCHA_PUBLIC_KEY = '6LdRAmIUAAAAAMuzveig6oGUVTG60xMCpx-2dBTd'
 RECAPTCHA_PRIVATE_KEY = '6LdRAmIUAAAAADFYN4S5gbIvc3d83EwKLgsWU4W8'
@@ -129,3 +130,7 @@ USE_TZ = True
 STATIC_URL = '/static/'
 
 STATIC_ROOT = posixpath.join(*(BASE_DIR.split(os.path.sep) + ['static']))
+
+MEDIA_ROOT = os.path.join(BASE_DIR, 'media')
+
+MEDIA_URL = '/media/'

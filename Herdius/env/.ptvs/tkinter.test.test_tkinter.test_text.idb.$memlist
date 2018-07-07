@@ -1,7 +1,13 @@
 TextTest
 tkinter
 AbstractTkTest
-run_unittest
+__spec__
+__file__
+__package__
+__name__
 tests_gui
+__builtins__
+__cached__
 requires
+run_unittest
 unittest

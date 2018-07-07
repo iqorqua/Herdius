@@ -1,2 +1,8 @@
-GPSTAGS
 TAGS
+__spec__
+__file__
+GPSTAGS
+__name__
+__builtins__
+__cached__
+__package__

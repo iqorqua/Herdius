@@ -1,1 +1,13 @@
+wsgiref
+logging
+__spec__
+__file__
 basehttp
+__path__
+__name__
+socket
+__builtins__
+__cached__
+sys
+__future__
+__package__

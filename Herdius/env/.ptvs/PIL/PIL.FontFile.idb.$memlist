@@ -1,7 +1,13 @@
 WIDTH
 os
+__spec__
+__file__
 _binary
+__name__
 print_function
 FontFile
+__builtins__
+__cached__
 puti16
 Image
+__package__

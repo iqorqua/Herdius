@@ -1,8 +1,14 @@
 Text
 Tk
-DummyEditwin
+ParenMatch
+__spec__
+__file__
+unittest
+__name__
 ParenMatchTest
 Mock
-ParenMatch
+__builtins__
+__cached__
 requires
-unittest
+DummyEditwin
+__package__

@@ -5,7 +5,10 @@ contextlib
 pickle
 re
 log_foobar
-captured_stderr
+Test
+__builtins__
+ResultWithNoStartTestRunStopTestRun
+__file__
 support
 pprint
 inspect
@@ -17,8 +20,11 @@ deepcopy
 weakref
 warnings
 Test_TestCase
+__name__
 LoggingResult
-Test
-ResultWithNoStartTestRunStopTestRun
+captured_stderr
 TestHashing
 unittest
+__package__
+__cached__
+__spec__

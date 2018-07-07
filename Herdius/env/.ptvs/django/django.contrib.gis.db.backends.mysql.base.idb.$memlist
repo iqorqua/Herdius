@@ -1,6 +1,12 @@
+DatabaseFeatures
 MySQLDatabaseWrapper
 MySQLIntrospection
-MySQLOperations
+__spec__
+__file__
+__name__
 DatabaseWrapper
-DatabaseFeatures
+MySQLOperations
+__builtins__
+__cached__
 MySQLGISSchemaEditor
+__package__

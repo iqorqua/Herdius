@@ -1,6 +1,12 @@
-finders
-force_text
+__cached__
+__spec__
 unicode_literals
-Command
+force_text
+finders
+__name__
 os
+__builtins__
+__file__
+Command
 LabelCommand
+__package__

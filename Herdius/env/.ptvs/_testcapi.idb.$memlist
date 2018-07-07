@@ -18,6 +18,7 @@ PyTime_AsSecondsDouble
 PyTime_AsTimeval
 PyTime_FromSeconds
 PyTime_FromSecondsObject
+RecursingInfinitelyError
 SHRT_MAX
 SHRT_MIN
 SIZEOF_PYGC_HEAD
@@ -129,11 +130,13 @@ raise_SIGINT_then_send_None
 raise_exception
 raise_memoryerror
 raise_signal
+remove_mem_hooks
 return_null_without_error
 return_result_with_error
 run_in_subinterp
 set_errno
 set_exc_info
+set_nomemory
 test_L_code
 test_Z_code
 test_buildvalue_N

@@ -1,9 +1,15 @@
 getregentry
 encode
-IncrementalDecoder
+StreamWriter
+__spec__
+__file__
 IncrementalEncoder
+__name__
 codecs
 decode
-StreamWriter
+IncrementalDecoder
+__builtins__
+__cached__
 StreamReader
 sys
+__package__

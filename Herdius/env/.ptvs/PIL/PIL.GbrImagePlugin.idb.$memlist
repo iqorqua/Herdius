@@ -1,5 +1,11 @@
 ImageFile
-Image
-GbrImageFile
+__spec__
+__file__
 i32
+__name__
+GbrImageFile
 _accept
+__builtins__
+__cached__
+Image
+__package__

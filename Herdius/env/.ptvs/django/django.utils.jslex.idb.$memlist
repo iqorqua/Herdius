@@ -1,7 +1,13 @@
 prepare_js_for_gettext
+__cached__
+__spec__
 unicode_literals
-Tok
 literals
+Tok
+__name__
 Lexer
-re
+__builtins__
+__file__
 JsLexer
+re
+__package__

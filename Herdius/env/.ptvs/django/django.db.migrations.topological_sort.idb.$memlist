@@ -1,2 +1,8 @@
-stable_topological_sort
+__spec__
+__file__
+__name__
+__builtins__
+__cached__
 topological_sort_as_sets
+stable_topological_sort
+__package__

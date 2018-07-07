@@ -1,6 +1,10 @@
+__spec__
+__file__
 print_
 BaseDatabaseClient
+__name__
 DatabaseClient
+__builtins__
+__cached__
 NamedTemporaryFile
-os
-subprocess
+__package__

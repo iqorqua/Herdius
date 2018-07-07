@@ -1,5 +1,11 @@
 ImageFile
-Image
-i8
+__spec__
+__file__
 __version__
+i8
+__name__
 PcdImageFile
+__builtins__
+__cached__
+Image
+__package__

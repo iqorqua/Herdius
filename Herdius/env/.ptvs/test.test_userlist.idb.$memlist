@@ -1,4 +1,10 @@
 UserListTest
-unittest
+__spec__
+__file__
 list_tests
+__name__
 UserList
+__builtins__
+__cached__
+unittest
+__package__

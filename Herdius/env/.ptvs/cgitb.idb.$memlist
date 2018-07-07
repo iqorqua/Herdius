@@ -6,10 +6,12 @@ tempfile
 __UNDEF__
 handler
 os
-Hook
+__builtins__
 linecache
+__file__
 keyword
-inspect
+__package__
+__cached__
 reset
 strong
 small
@@ -18,5 +20,9 @@ traceback
 enable
 scanvars
 grey
+__name__
 text
+Hook
 pydoc
+inspect
+__spec__

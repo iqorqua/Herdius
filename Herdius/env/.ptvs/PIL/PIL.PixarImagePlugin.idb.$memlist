@@ -1,6 +1,12 @@
 ImageFile
-Image
-PixarImageFile
+__spec__
+__file__
 __version__
 i16
+__name__
 _accept
+__builtins__
+__cached__
+PixarImageFile
+Image
+__package__

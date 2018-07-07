@@ -4,10 +4,12 @@ Test_is_list
 Test_find_binding
 Test_Name
 Test_does_tree_import
-Attr
 Test_is_tuple
-Test_Attr
+Attr
+__builtins__
+__file__
 support
+__cached__
 Test_touch_import
 MacroTestCase
 parse
@@ -15,6 +17,10 @@ Comma
 Name
 fixer_util
 Node
+__name__
 token
 Call
+Test_Attr
 Test_Call
+__package__
+__spec__

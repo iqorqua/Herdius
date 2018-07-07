@@ -1,2 +1,10 @@
-ogrinspect
+__spec__
+__cached__
+argparse
 inspectdb
+__name__
+ogrinspect
+__builtins__
+__file__
+__path__
+__package__

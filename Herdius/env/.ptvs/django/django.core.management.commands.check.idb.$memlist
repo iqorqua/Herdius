@@ -1,7 +1,13 @@
-registry
 BaseCommand
-CommandError
+registry
+__cached__
+__spec__
 unicode_literals
 Command
+__name__
+CommandError
 checks
 apps
+__builtins__
+__file__
+__package__

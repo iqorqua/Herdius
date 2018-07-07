@@ -1,8 +1,14 @@
-register_handler
+_accept
+ImageFile
+__spec__
+__file__
 GribStubImageFile
 i8
+__name__
 _save
-ImageFile
-_accept
+register_handler
+__builtins__
+__cached__
 _handler
 Image
+__package__

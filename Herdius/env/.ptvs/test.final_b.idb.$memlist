@@ -1,6 +1,12 @@
+C
+__spec__
+__file__
 _underscored
 test
-c
-x
+__name__
 shutil
-C
+c
+__builtins__
+__cached__
+x
+__package__

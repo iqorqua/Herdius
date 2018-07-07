@@ -1,8 +1,14 @@
 _WKBReader
 __all__
+__cached__
+__spec__
 GEOSGeometry
 _WKTReader
-WKBReader
-WKTWriter
-WKTReader
 WKBWriter
+__name__
+WKTWriter
+__builtins__
+__file__
+WKTReader
+WKBReader
+__package__

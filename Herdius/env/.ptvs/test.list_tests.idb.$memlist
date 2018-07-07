@@ -1,6 +1,12 @@
-support
-seq_tests
-cmp_to_key
-sys
 os
+__spec__
+__file__
+cmp_to_key
+seq_tests
+__name__
+support
+__builtins__
+__cached__
 CommonTest
+sys
+__package__

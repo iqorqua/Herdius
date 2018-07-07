@@ -1,5 +1,11 @@
-TestCDefault
 CTest
-PyTest
+TestCDefault
+__spec__
+__file__
 TestPyDefault
+PyTest
+__name__
+__builtins__
+__cached__
 TestDefault
+__package__

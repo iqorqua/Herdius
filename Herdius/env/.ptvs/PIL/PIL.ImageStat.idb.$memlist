@@ -1,5 +1,11 @@
-operator
 math
-Stat
-functools
+operator
+__spec__
+__file__
 Global
+Stat
+__name__
+functools
+__builtins__
+__cached__
+__package__

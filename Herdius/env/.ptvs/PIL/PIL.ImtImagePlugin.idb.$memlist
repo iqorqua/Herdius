@@ -1,6 +1,12 @@
 ImageFile
+__spec__
+__file__
 Image
-re
 __version__
+__name__
 ImtImageFile
+__builtins__
+__cached__
 field
+re
+__package__

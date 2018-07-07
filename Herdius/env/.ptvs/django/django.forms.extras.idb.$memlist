@@ -1,5 +1,12 @@
-RemovedInDjango20Warning
-warnings
-widgets
-__all__
 SelectDateWidget
+__spec__
+widgets
+__file__
+RemovedInDjango20Warning
+__package__
+__name__
+__all__
+__builtins__
+__cached__
+warnings
+__path__

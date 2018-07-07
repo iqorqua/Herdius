@@ -1,5 +1,11 @@
-errno
-unittest
-std_c_errors
 ErrorcodeTests
+__spec__
+__file__
+unittest
+__name__
+std_c_errors
+__builtins__
+__cached__
+errno
 ErrnoAttributeTests
+__package__

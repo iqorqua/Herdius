@@ -1,7 +1,13 @@
-bdf_slant
 BdfFontFile
-print_function
+bdf_slant
 FontFile
+__spec__
+__file__
+__name__
+print_function
 bdf_char
+__builtins__
+__cached__
 bdf_spacing
 Image
+__package__

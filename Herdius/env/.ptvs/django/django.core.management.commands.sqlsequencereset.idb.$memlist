@@ -1,5 +1,11 @@
-DEFAULT_DB_ALIAS
 AppCommand
+__cached__
+__spec__
 unicode_literals
-Command
+DEFAULT_DB_ALIAS
+__name__
 connections
+__builtins__
+__file__
+Command
+__package__

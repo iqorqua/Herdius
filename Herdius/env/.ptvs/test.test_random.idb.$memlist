@@ -4,9 +4,13 @@ partial
 MersenneTwister_TestBasicOps
 warnings
 pickle
+__name__
+__builtins__
 sin
-SystemRandom_TestBasicOps
+__file__
 support
+__cached__
+__spec__
 SystemRandom_available
 gamma
 TestBasicOps
@@ -14,7 +18,9 @@ pi
 log
 fsum
 TestDistributions
+SystemRandom_TestBasicOps
 random
 TestModule
 unittest
+__package__
 exp

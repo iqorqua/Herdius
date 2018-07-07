@@ -1,3 +1,9 @@
 MIMEMultipart
-__all__
 MIMEBase
+__spec__
+__all__
+__file__
+__name__
+__builtins__
+__cached__
+__package__

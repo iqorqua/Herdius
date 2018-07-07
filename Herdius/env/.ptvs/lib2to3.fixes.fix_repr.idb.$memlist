@@ -1,5 +1,11 @@
-parenthesize
-Call
 Name
+Call
+__spec__
+__file__
+__name__
 fixer_base
+__builtins__
+__cached__
 FixRepr
+parenthesize
+__package__

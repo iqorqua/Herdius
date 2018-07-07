@@ -1,7 +1,13 @@
 run_doctest
+EnvironmentVarGuard
+__spec__
+__file__
 GetoptTests
+unittest
+__name__
 sentinel
 getopt
-EnvironmentVarGuard
+__builtins__
+__cached__
 verbose
-unittest
+__package__

@@ -1,7 +1,13 @@
-i32
 SunImageFile
 ImageFile
-_accept
+__spec__
+__file__
 ImagePalette
-Image
 __version__
+__name__
+_accept
+__builtins__
+__cached__
+i32
+Image
+__package__
