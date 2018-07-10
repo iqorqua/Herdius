@@ -1,7 +1,6 @@
 NAME
 print_function
 L
-URL_AND_MARKER
 division
 __spec__
 VERSION_AND_MARKER
@@ -28,13 +27,14 @@ PUNCTUATION
 urlparse
 Word
 re
-MARKER_SEPERATOR
+URL_AND_MARKER
 __builtins__
 EXTRAS_LIST
 LBRACKET
 ParseException
 EXTRA
 IDENTIFIER
+MARKER_SEPARATOR
 VERSION_MANY
 RBRACKET
 originalTextFor

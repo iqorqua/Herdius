@@ -1,4 +1,3 @@
-sys
 supports_lone_surrogates
 memoize
 unicode_literals
@@ -17,6 +16,5 @@ default_etree
 ModuleType
 __name__
 isSurrogatePair
-PY27
 __package__
 __spec__

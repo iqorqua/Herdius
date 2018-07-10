@@ -1,10 +1,11 @@
+_local_version_separators
 _legacy_version_replacement_map
 _parse_version_parts
 division
 _parse_letter_version
 Infinity
 re
-_parse_local_version
+_cmpkey
 collections
 __builtins__
 LegacyVersion
@@ -18,9 +19,8 @@ InvalidVersion
 Version
 print_function
 parse
-_cmpkey
 __name__
-_local_version_seperators
+_parse_local_version
 _Version
 _BaseVersion
 _legacy_version_component_re

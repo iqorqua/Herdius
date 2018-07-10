@@ -14,7 +14,7 @@ StringIO
 models
 check_compatibility
 get
-__path__
+WINDOWS
 __version__
 utils
 packages
@@ -55,6 +55,7 @@ http
 Response
 ConnectTimeout
 adapters
+pyopenssl
 cookies
 ConnectionError
 cookielib
@@ -63,6 +64,7 @@ base64
 time
 NullHandler
 calendar
+__path__
 __spec__
 __title__
 sys
@@ -95,6 +97,5 @@ threading
 platform
 __copyright__
 __author_email__
-idna
 urllib2
 datetime

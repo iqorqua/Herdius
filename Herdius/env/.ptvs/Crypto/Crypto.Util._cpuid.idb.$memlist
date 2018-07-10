@@ -1,0 +1,10 @@
+__spec__
+load_pycryptodome_raw_lib
+__file__
+__name__
+_raw_cpuid_lib
+have_clmul
+have_aes_ni
+__builtins__
+__cached__
+__package__

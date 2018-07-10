@@ -12,7 +12,6 @@ __package__
 __name__
 DataLossWarning
 asciiLowercase
-ReparseException
 scopingElements
 string
 adjustMathMLAttributes
@@ -37,6 +36,7 @@ voidElements
 __cached__
 adjustForeignAttributes
 mathmlTextIntegrationPointElements
+_ReparseException
 unadjustForeignAttributes
 E
 headingElements

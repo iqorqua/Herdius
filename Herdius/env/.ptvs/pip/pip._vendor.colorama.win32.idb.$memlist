@@ -8,7 +8,7 @@ __name__
 FillConsoleOutputAttribute
 SetConsoleTitle
 _FillConsoleOutputAttribute
-<lambda>
+_winapi_test
 wintypes
 byref
 _SetConsoleTextAttribute
@@ -22,6 +22,7 @@ _GetConsoleScreenBufferInfo
 __spec__
 STDERR
 _FillConsoleOutputCharacterA
+<lambda>
 windll
 __cached__
 c_char

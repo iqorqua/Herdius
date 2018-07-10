@@ -1,4 +1,4 @@
-NSIG
+SIGINT
 _enum_to_int
 __package__
 __name__
@@ -7,13 +7,13 @@ pthread_sigmask
 <lambda>
 SIG_IGN
 SIG_DFL
-SIGTERM
+SIGSEGV
 CTRL_C_EVENT
 SIGFPE
 SIGBREAK
 sigwait
 __file__
-SIGINT
+NSIG
 Signals
 set_wakeup_fd
 __builtins__
@@ -26,7 +26,7 @@ _globals
 SIGABRT
 _int_to_enum
 __cached__
-SIGSEGV
+SIGTERM
 getsignal
 CTRL_BREAK_EVENT
 Handlers

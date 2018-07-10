@@ -27,6 +27,7 @@ SemanticMatcher
 __name__
 Version
 _suggest_semantic_version
+parse_requirement
 logging
 _VERSION_PART
 __cached__

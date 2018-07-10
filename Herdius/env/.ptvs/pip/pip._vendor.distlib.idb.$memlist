@@ -14,11 +14,11 @@ gzip
 configparser
 __package__
 sysconfig
+importlib
 glob
-ast
 version
 zipfile
-json
+contextlib
 collections
 socket
 io
@@ -38,8 +38,8 @@ stat
 platform
 ConfigParser
 tokenize
-urllib2
-email
+datetime
+logger
 pkgutil
 py_compile
 HTMLParser
@@ -68,7 +68,7 @@ codecs
 reprlib
 ssl
 xmlrpc
-contextlib
+json
 __future__
 __name__
 tempfile
@@ -87,7 +87,6 @@ markers
 htmlentitydefs
 subprocess
 database
-datetime
-pdb
-logger
+urllib2
+email
 wheel

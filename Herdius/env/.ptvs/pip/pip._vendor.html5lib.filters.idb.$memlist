@@ -13,7 +13,6 @@ __path__
 base
 alphabeticalattributes
 __name__
-ordereddict
 sanitizer
 __package__
 __spec__

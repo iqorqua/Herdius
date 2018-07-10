@@ -2,12 +2,19 @@
 
 {% block content %}
 
-<div class="jumbotron">
-    <h1>Welcome to the Herdius ICO!</h1>
-    <p class="lead">Register to be part of the upcoming Herdius public ICO which is scheduled to happen 2018.The Herdius pre-sale is ongoing and is handled separately. Please reach out to ir@herdius.com for participating and further details.By registering on the Herdius ICO website it will be possible for you to refer others to the ICO and gain a bonus based on their token purchase. We also want to reward interactions that are happening on our social media channels, joining and being active in our community is also rewarded!</p>
+<div class="jumbotron">   
+
+    {% if user.is_authenticated %} 
+    <div class="row">
+     <div class="col-md-1">
+        <img src="{{ user.image_id }}" width="50px" height="50px">
+      </div>
+    </div>
+    {% endif %}
+
     <p><button class="btn btn-primary btn-large" id="registerNewUser">Register &raquo;</button></p>
     <p><a href="https://www.djangoproject.com/" class="btn btn-primary btn-large">Sign in &raquo;</a></p>
-   {% if user.is_authenticated %} <p>{{ user.username }}</p>{% endif %}
+
 </div>
 
 <!--Upload Form-->
@@ -42,7 +49,7 @@
 
                 });
         var fd = new FormData(document.getElementById("fileinfo"));
-        fd.append("username", "WEBUPLOAD2");
+        fd.append("username", "testtest");
         fd.append("first_name", "WEBUPLOAD");
         fd.append("last_name", "WEBUPLOAD");
         fd.append("postal_code", "WEBUPLOAD");
@@ -51,7 +58,7 @@
         fd.append("bday", "2000-12-12");
         fd.append("adress", "WEBUPLOAD");
         fd.append("email", "WEBUPLOAD");
-        fd.append("password", "WEBUPLOAD");
+        fd.append("password", "testtest");
         fd.append("recapcha", grecaptcha.getResponse());
         fd.append("csrfmiddlewaretoken", '{{ csrf_token }}');
         $.ajax({

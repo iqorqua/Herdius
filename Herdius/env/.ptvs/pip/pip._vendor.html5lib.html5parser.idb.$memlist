@@ -1,7 +1,6 @@
-spaceCharacters
-HTMLParser
+__builtins__
 __spec__
-cdataElements
+unicode_literals
 adjustSVGAttributes
 namespaces
 specialElements
@@ -9,7 +8,6 @@ __package__
 adjust_attributes
 types
 impliedTagToken
-ReparseException
 treebuilders
 parseFragment
 adjustMathMLAttributes
@@ -20,9 +18,9 @@ __file__
 ParseError
 OrderedDict
 division
-__builtins__
-PY3
-unicode_literals
+spaceCharacters
+HTMLParser
+cdataElements
 adjustForeignAttributesMap
 htmlIntegrationPointElements
 rcdataElements
@@ -35,6 +33,7 @@ __cached__
 _tokenizer
 Marker
 mathmlTextIntegrationPointElements
+_ReparseException
 parse
 E
 headingElements

@@ -41,6 +41,7 @@ pluralize
 safeseq
 ljust
 urlencode
+cut
 stringfilter
 RemovedInDjango20Warning
 striptags

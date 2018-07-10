@@ -10,10 +10,10 @@ site_config_dir
 __package__
 _get_win_folder_with_jna
 __name__
-win32com
 __cached__
 _get_win_folder_with_ctypes
 user_data_dir
+user_state_dir
 user_cache_dir
 __file__
 site_data_dir

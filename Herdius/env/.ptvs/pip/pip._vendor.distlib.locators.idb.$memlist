@@ -6,7 +6,7 @@ HTML_CONTENT_TYPE
 threading
 URLError
 logger
-DependencyFinder
+NAME_VERSION_RE
 __package__
 string_types
 __name__
@@ -42,8 +42,9 @@ __builtins__
 DistributionPath
 __spec__
 DistPathLocator
+DependencyFinder
 make_dist
-NAME_VERSION_RE
+MetadataInvalidError
 url2pathname
 locate
 default_locator

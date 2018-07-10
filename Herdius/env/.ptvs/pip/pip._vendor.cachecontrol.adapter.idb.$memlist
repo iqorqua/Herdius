@@ -10,4 +10,5 @@ DictCache
 functools
 __builtins__
 __file__
+zlib
 __package__

@@ -9,7 +9,6 @@ webencodings
 __package__
 __name__
 BytesIO
-ReparseException
 EncodingBytes
 EncodingParser
 HTMLInputStream
@@ -34,6 +33,7 @@ __cached__
 invalid_unicode_no_surrogate
 asciiLettersBytes
 absolute_import
+_ReparseException
 ascii_punctuation_re
 ContentAttrParser
 StringIO

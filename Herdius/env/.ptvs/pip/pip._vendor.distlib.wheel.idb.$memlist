@@ -13,12 +13,13 @@ VER_SUFFIX
 __package__
 __name__
 ABI
-logging
+FileOperator
 ARCH
 <lambda>
 DistlibException
 Metadata
 Wheel
+WHEEL_METADATA_FILENAME
 METADATA_FILENAME
 base64
 shutil
@@ -46,7 +47,7 @@ IMP_PREFIX
 sys
 Cache
 posixpath
-FileOperator
+logging
 NAME_VERSION_RE
 __cached__
 read_exports

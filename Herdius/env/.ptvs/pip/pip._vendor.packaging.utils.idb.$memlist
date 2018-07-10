@@ -1,9 +1,12 @@
+canonicalize_version
+InvalidVersion
 canonicalize_name
 __spec__
 absolute_import
 __file__
 division
 __name__
+Version
 print_function
 _canonicalize_regex
 __builtins__

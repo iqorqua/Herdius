@@ -13,6 +13,7 @@ from django.core.files import File
 from django.conf import settings
 from django.http import HttpResponse
 from django.http import JsonResponse
+from app.django_encrypt_file import EncryptionService, ValidationError
 
 def home(request):
     """Renders the home page."""
@@ -88,9 +89,17 @@ def register(request):
             user.postal_code = postal_code
             user.phone = phone
             user.bday = bday
-            user.picture_id.save(request.FILES.get('picture_id').name, request.FILES.get('picture_id'))
             user.avatar.save(request.FILES.get('avatar').name, request.FILES.get('avatar'))
-            user.save()
+            service = EncryptionService(raise_exception=False)
+            try:
+               myfile = request.FILES.get('picture_id', None)
+               print( user.password)
+               password = user.password #getattr(settings, "ENCRYPTION_KEY", None)
+               encrypted_file = EncryptionService().encrypt_file(myfile, password, extension='enc')
+               user.encrypted_data = encrypted_file.name
+               user.save()
+            except ValidationError as e:
+               print(e)
             result = 'Succsessfully created!'
         else:
             result = 'Capcha error!'

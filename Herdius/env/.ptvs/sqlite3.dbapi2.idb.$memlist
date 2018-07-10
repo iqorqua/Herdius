@@ -69,8 +69,8 @@ PrepareProtocol
 SQLITE_CREATE_TEMP_TABLE
 SQLITE_INSERT
 Row
-__file__
 SQLITE_DROP_TABLE
+__file__
 SQLITE_REINDEX
 ProgrammingError
 Error

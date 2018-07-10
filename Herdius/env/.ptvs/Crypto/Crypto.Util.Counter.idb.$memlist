@@ -1,0 +1,16 @@
+bord
+new
+b
+unhexlify
+__builtins__
+__file__
+tobytes
+__cached__
+ValueError
+bchr
+bstr
+tostr
+__name__
+byte_string
+__package__
+__spec__

@@ -10,10 +10,9 @@ os
 OpenSSL
 __builtins__
 __file__
-sys
 __package__
 __cached__
-idna
+io
 _securetransport
 logging
 errno
@@ -27,6 +26,6 @@ socks
 appengine
 threading
 socket
-io
+sys
 securetransport
 __spec__

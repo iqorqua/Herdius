@@ -3,7 +3,7 @@ unicode_literals
 concatenateCharacterTokens
 __future__
 re
-ordereddict
+lxml
 collections
 __builtins__
 dom
@@ -17,7 +17,6 @@ __path__
 base
 division
 default_etree
-lxml
 __name__
 treeWalkerCache
 getTreeWalker
