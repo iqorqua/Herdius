@@ -102,6 +102,7 @@
         fd.append("password", $('#password').val());
         fd.append("recapcha", grecaptcha.getResponse());
         fd.append("csrfmiddlewaretoken", '{{ csrf_token }}');
+        $("#registerNewUser").prop("disabled",true);
         $.ajax({
            url: "{% url 'register' %}",
            type: "post", // or "get"
@@ -112,6 +113,7 @@
            data: fd,
            success: function(data) {
            alert(data['result'])
+           $("#registerNewUser").prop("disabled",false);
     }});
      }); });
 </script>
