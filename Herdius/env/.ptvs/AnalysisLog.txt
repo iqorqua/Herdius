@@ -14169,3 +14169,7 @@ SystemError: initialization of _strxor failed without raising an exception
 2018-07-09T17:46:11: Saving group "c:\users\igorqua\source\repos\herdius\herdius\env\lib\site-packages\django"
 2018-07-09T17:46:11: End of group "c:\users\igorqua\source\repos\herdius\herdius\env\lib\site-packages\django"
 2018-07-09T17:46:13: Deleting 0 files
+
+2018-07-12T19:12:58: Start analysis
+2018-07-12T19:12:58: IncludeModulesFromModulePath = win32com
+2018-07-12T19:13:00: Deleting 0 files

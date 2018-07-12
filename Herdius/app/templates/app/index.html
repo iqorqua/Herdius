@@ -11,17 +11,53 @@
       </div>
     </div>
     {% endif %}
-
-    <p><button class="btn btn-primary btn-large" id="registerNewUser">Register &raquo;</button></p>
-    <p><a href="https://www.djangoproject.com/" class="btn btn-primary btn-large">Sign in &raquo;</a></p>
-
-</div>
-
+    <form>
+  <div class="form-group">
+    <label for="username">Username</label>
+    <input type="email" class="form-control" id="username" placeholder="username">
+  </div>
+  <div class="form-group">
+    <label for="first_name">first_name</label>
+    <input type="email" class="form-control" id="first_name" placeholder="first_name">
+  </div>
+  <div class="form-group">
+    <label for="last_name">last_name</label>
+    <input type="email" class="form-control" id="last_name" placeholder="last_name">
+  </div>
+  <div class="form-group">
+    <label for="postal_code">postal_code</label>
+    <input type="email" class="form-control" id="postal_code" placeholder="postal_code">
+  </div>
+  <div class="form-group">
+    <label for="country">country</label>
+    <input type="email" class="form-control" id="country" placeholder="country">
+  </div>
+  <div class="form-group">
+    <label for="phone">phone</label>
+    <input type="email" class="phone" id="phone" placeholder="phone">
+  </div>
+  <div class="form-group">
+    <label for="bday">bday</label>
+    <input type="email" class="form-control" id="bday" placeholder="bday">
+  </div>
+  <div class="form-group">
+    <label for="email">email</label>
+    <input type="email" class="form-control" id="email" placeholder="email">
+  </div>
+  <div class="form-group">
+    <label for="password">password</label>
+    <input type="email" class="form-control" id="password" placeholder="password">
+  </div>
+  <div class="form-group">
+    <label for="adress">adress</label>
+    <textarea class="form-control" id="adress" rows="3"></textarea>
+  </div>
+</form>
 <!--Upload Form-->
-<form method="post" id="fileinfo" name="fileinfo" onsubmit="return submitForm();">{{ csrf_token }}
+<form method="post" id="fileinfo" name="fileinfo" onsubmit="return submitForm();">
         <label>Select a file:</label><br>
-        <input type="file" name="picture_id" required />
-        <input type="file" name="avatar" required />
+        <input type="file"  class="form-control-file" name="picture_id" required />
+        <input type="file"  class="form-control-file" name="avatar" required />
     </form>
 
 <div class="row">
@@ -31,6 +67,11 @@
     <div class="g-recaptcha" data-sitekey="6LdRAmIUAAAAAMuzveig6oGUVTG60xMCpx-2dBTd"></div>
     </div>
 </div>
+    <p><button class="btn btn-primary btn-large" id="registerNewUser">Register &raquo;</button></p>
+    <p><a href="https://www.djangoproject.com/" class="btn btn-primary btn-large">Sign in &raquo;</a></p>
+
+</div>
+
 <script src="//code.jquery.com/jquery-1.9.1.js"></script>
 <script>
     $(document).ready(function(){
@@ -49,16 +90,16 @@
 
                 });
         var fd = new FormData(document.getElementById("fileinfo"));
-        fd.append("username", "testtest");
-        fd.append("first_name", "WEBUPLOAD");
-        fd.append("last_name", "WEBUPLOAD");
-        fd.append("postal_code", "WEBUPLOAD");
-        fd.append("country", "WEBUPLOAD");
-        fd.append("phone", "WEBUPLOAD");
+        fd.append("username", $('#username').val());
+        fd.append("first_name", $('#first_name').val());
+        fd.append("last_name", $('#last_name').val());
+        fd.append("postal_code", $('#postal_code').val());
+        fd.append("country", $('#country').val());
+        fd.append("phone", $('#phone').val());
         fd.append("bday", "2000-12-12");
-        fd.append("adress", "WEBUPLOAD");
-        fd.append("email", "WEBUPLOAD");
-        fd.append("password", "testtest");
+        fd.append("adress", $('#adress').val());
+        fd.append("email", $('#email').val());
+        fd.append("password", $('#password').val());
         fd.append("recapcha", grecaptcha.getResponse());
         fd.append("csrfmiddlewaretoken", '{{ csrf_token }}');
         $.ajax({

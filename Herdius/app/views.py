@@ -14,6 +14,7 @@ from django.conf import settings
 from django.http import HttpResponse
 from django.http import JsonResponse
 from app.django_encrypt_file import EncryptionService, ValidationError
+import traceback
 
 def home(request):
     """Renders the home page."""
@@ -57,6 +58,7 @@ def register(request):
     try:
         assert isinstance(request, HttpRequest)
         print('!!!->' + str(request.POST) + '<-!!!')
+        result = 't'
         ''' Begin reCAPTCHA validation '''
         recaptcha_response = request.POST.get('recapcha')
         url = 'https://www.google.com/recaptcha/api/siteverify'
@@ -79,7 +81,6 @@ def register(request):
         postal_code = request.POST.get('postal_code')
         phone = request.POST.get('phone')
         bday = request.POST.get('bday')
-        result = 't'
         if recapcha['success']:
             user = MyUser.objects.create_user(username, email, password, bday = bday)
             user.is_staff = True
@@ -104,7 +105,11 @@ def register(request):
         else:
             result = 'Capcha error!'
     except Exception as ex:
-        print('<<' + str(ex)+ '>>')
+        #print('<<' + str(ex)+ '>>')
+        print("Exception in user code:")
+        print("-"*60)
+        traceback.print_exc(file=sys.stdout)
+        print("-"*60)
         result = str(ex)
     finally:
         return JsonResponse({'result': result})
