@@ -17,10 +17,8 @@ class MyUser(AbstractUser):
     postal_code=models.CharField(max_length=30, blank=False)
     phone=models.CharField(max_length=30, blank=False)
     bday = models.DateField(null=False, blank=False)
-    picture_id = models.ImageField(upload_to = 'pic_folder/', default = 'pic_folder/None/no-img.jpg', blank = True)
-    avatar = models.ImageField(upload_to = 'avatars/', default = 'pic_folder/no-img.jpg', blank = True)
+    avatar = models.ImageField(upload_to = 'avatars/', default = 'pic_folder/no-img.jpg', blank = False)
     encrypted_data = models.CharField(max_length=300, blank=False)
-
 
     @property
     def image_id(self):
