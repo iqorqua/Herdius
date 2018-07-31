@@ -28,7 +28,7 @@ class MyUser(AbstractUser):
                 file = File(open(self.encrypted_data, 'rb'), name=n)
                 password = self.password #getattr(settings, "ENCRYPTION_KEY", None)
                 decrypt_file = service.decrypt_file(file, password)
-                my_thread = threading.Thread(target=kamikadze, args=(decrypt_file.name,))
+                my_thread = threading.Thread(target=kamikadze, args=(decrypt_file.file.name,))
                 my_thread.start()
             except ValidationError as e:
                print(e)
