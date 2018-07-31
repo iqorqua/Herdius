@@ -1,120 +1,269 @@
-{% extends "app/layout.html" %}
+﻿{% extends "app/layout.html" %}
+{% load staticfiles %}
+{%block content%}
+<div style="line-height: 1.6;">
+    <!-- Header -->
+	<header id="home">
+		<!-- Background Image -->
+		<div class="bg-img" style="background-image: url('{% static 'app/img/background1.jpg' %}');">
+			<div class="overlay"></div>
+		</div>
+		<!-- /Background Image -->
+        		<!-- home wrapper -->
+		<div class="home-wrapper">
+			<div class="container">
+				<div class="row">
 
-{% block content %}
+					<!-- home content -->
+                    {% if not user.is_authenticated %}
+					<div class="col-md-10 col-md-offset-1">
+						<div class="home-content">
+							<h1 class="white-text">Herdius</h1>
+							<p class="white-text">Morbi mattis felis at nunc. Duis viverra diam non justo. In nisl. Nullam sit amet magna in magna gravida vehicula. Mauris tincidunt sem sed arcu. Nunc posuere.
+							</p>
+							<a class="white-btn" href="{% url 'login' %}">Log In</a>
+							<a class="main-btn" href="{% url 'registration' %}">Sign in</a>
+						</div>
+					</div>
+                    {% endif %}
+                    {% if user.is_authenticated %}
+					<div class="col-md-10 col-md-offset-1">
+						<div class="home-content">
+							<h1 class="white-text">Herdius</h1>
+							<p class="white-text">Hello {{user.first_name}} {{user.last_name}}! Glade to see you!
+							</p>
+							<a class="main-btn" href="{% url 'cabinet' %}">Cabinet</a>
+						</div>
+					</div>
+                    {% endif %}
+					<!-- /home content -->
 
-<div class="jumbotron">   
+				</div>
+			</div>
+		</div>
+		<!-- /home wrapper -->
+	</header>
+	<!-- /Header -->
 
-    {% if user.is_authenticated %} 
-    <div class="row">
-     <div class="col-md-1">
-        <img src="{{ user.image_id }}" width="50px" height="50px">
-      </div>
-    </div>
-    {% endif %}
-    <form>
-  <div class="form-group">
-    <label for="username">Username</label>
-    <input type="email" class="form-control" id="username" placeholder="username">
-  </div>
-  <div class="form-group">
-    <label for="first_name">first_name</label>
-    <input type="email" class="form-control" id="first_name" placeholder="first_name">
-  </div>
-  <div class="form-group">
-    <label for="last_name">last_name</label>
-    <input type="email" class="form-control" id="last_name" placeholder="last_name">
-  </div>
-  <div class="form-group">
-    <label for="postal_code">postal_code</label>
-    <input type="email" class="form-control" id="postal_code" placeholder="postal_code">
-  </div>
-  <div class="form-group">
-    <label for="country">country</label>
-    <input type="email" class="form-control" id="country" placeholder="country">
-  </div>
-  <div class="form-group">
-    <label for="phone">phone</label>
-    <input type="email" class="phone" id="phone" placeholder="phone">
-  </div>
-  <div class="form-group">
-    <label for="bday">bday</label>
-    <input type="email" class="form-control" id="bday" placeholder="bday">
-  </div>
-  <div class="form-group">
-    <label for="email">email</label>
-    <input type="email" class="form-control" id="email" placeholder="email">
-  </div>
-  <div class="form-group">
-    <label for="password">password</label>
-    <input type="email" class="form-control" id="password" placeholder="password">
-  </div>
-  <div class="form-group">
-    <label for="adress">adress</label>
-    <textarea class="form-control" id="adress" rows="3"></textarea>
-  </div>
-</form>
-<!--Upload Form-->
-<form method="post" id="fileinfo" name="fileinfo" onsubmit="return submitForm();">
-        <label>Select a file:</label><br>
-        <input type="file"  class="form-control-file" name="picture_id" required />
-        <input type="file"  class="form-control-file" name="avatar" required />
-    </form>
+	<!-- About -->
+	<div id="about" class="section md-padding">
 
-<div class="row">
-    <div class="col-md-8">
-        
-            <script src='https://www.google.com/recaptcha/api.js'></script>
-    <div class="g-recaptcha" data-sitekey="6LdRAmIUAAAAAMuzveig6oGUVTG60xMCpx-2dBTd"></div>
-    </div>
+		<!-- Container -->
+		<div class="container">
+
+			<!-- Row -->
+			<div class="row">
+
+				<!-- Section header -->
+				<div class="section-header text-center">
+					<h2 class="title">Welcome to Website</h2>
+				</div>
+				<!-- /Section header -->
+
+				<!-- about -->
+				<div class="col-md-4">
+					<div class="about">
+						<i class="fa fa-cogs"></i>
+						<h3>Fully Customizible</h3>
+						<p>Maecenas tempus tellus eget condimentum rhoncus sem quam semper libero sit amet.</p>
+						<a href="#">Read more</a>
+					</div>
+				</div>
+				<!-- /about -->
+
+				<!-- about -->
+				<div class="col-md-4">
+					<div class="about">
+						<i class="fa fa-magic"></i>
+						<h3>Awesome Features</h3>
+						<p>Maecenas tempus tellus eget condimentum rhoncus sem quam semper libero sit amet.</p>
+						<a href="#">Read more</a>
+					</div>
+				</div>
+				<!-- /about -->
+
+				<!-- about -->
+				<div class="col-md-4">
+					<div class="about">
+						<i class="fa fa-mobile"></i>
+						<h3>Fully Responsive</h3>
+						<p>Maecenas tempus tellus eget condimentum rhoncus sem quam semper libero sit amet.</p>
+						<a href="#">Read more</a>
+					</div>
+				</div>
+				<!-- /about -->
+
+			</div>
+			<!-- /Row -->
+
+		</div>
+		<!-- /Container -->
+
+	</div>
+	<!-- /About -->
+
+    <!-- Team -->
+	<div id="team" class="section md-padding">
+
+		<!-- Container -->
+		<div class="container">
+
+			<!-- Row -->
+			<div class="row">
+
+				<!-- Section header -->
+				<div class="section-header text-center">
+					<h2 class="title">Our Team</h2>
+				</div>
+				<!-- /Section header -->
+
+				<!-- team -->
+				<div class="col-sm-4">
+					<div class="team">
+						<div class="team-img">
+							<img class="img-responsive" src="{% static 'app/img/team3.jpg' %}" alt="">
+							<div class="overlay">
+								<div class="team-social">
+									<a href="#"><i class="fa fa-facebook"></i></a>
+									<a href="#"><i class="fa fa-google-plus"></i></a>
+									<a href="#"><i class="fa fa-twitter"></i></a>
+								</div>
+							</div>
+						</div>
+						<div class="team-content">
+							<h3>John Doe</h3>
+							<span>Web Designer</span>
+						</div>
+					</div>
+				</div>
+				<!-- /team -->
+
+				<!-- team -->
+				<div class="col-sm-4">
+					<div class="team">
+						<div class="team-img">
+							<img class="img-responsive" src="{% static 'app/img/team3.jpg' %}" alt="">
+							<div class="overlay">
+								<div class="team-social">
+									<a href="#"><i class="fa fa-facebook"></i></a>
+									<a href="#"><i class="fa fa-google-plus"></i></a>
+									<a href="#"><i class="fa fa-twitter"></i></a>
+								</div>
+							</div>
+						</div>
+						<div class="team-content">
+							<h3>John Doe</h3>
+							<span>Web Designer</span>
+						</div>
+					</div>
+				</div>
+				<!-- /team -->
+
+				<!-- team -->
+				<div class="col-sm-4">
+					<div class="team">
+						<div class="team-img">
+							<img class="img-responsive" src="{% static 'app/img/team3.jpg' %}" alt="">
+							<div class="overlay">
+								<div class="team-social">
+									<a href="#"><i class="fa fa-facebook"></i></a>
+									<a href="#"><i class="fa fa-google-plus"></i></a>
+									<a href="#"><i class="fa fa-twitter"></i></a>
+								</div>
+							</div>
+						</div>
+						<div class="team-content">
+							<h3>John Doe</h3>
+							<span>Web Designer</span>
+						</div>
+					</div>
+				</div>
+				<!-- /team -->
+
+			</div>
+			<!-- /Row -->
+
+		</div>
+		<!-- /Container -->
+
+	</div>
+	<!-- /Team -->
+
+<!-- Contact -->
+	<div id="contact" class="section md-padding">
+
+		<!-- Container -->
+		<div class="container">
+
+			<!-- Row -->
+			<div class="row">
+
+				<!-- Section-header -->
+				<div class="section-header text-center">
+					<h2 class="title">Get in touch</h2>
+				</div>
+				<!-- /Section-header -->
+
+				<!-- contact -->
+				<div class="col-sm-4">
+					<div class="contact">
+						<i class="fa fa-phone"></i>
+						<h3>Phone</h3>
+						<p>512-421-3940</p>
+					</div>
+				</div>
+				<!-- /contact -->
+
+				<!-- contact -->
+				<div class="col-sm-4">
+					<div class="contact">
+						<i class="fa fa-envelope"></i>
+						<h3>Email</h3>
+						<p>email@support.com</p>
+					</div>
+				</div>
+				<!-- /contact -->
+
+				<!-- contact -->
+				<div class="col-sm-4">
+					<div class="contact">
+						<i class="fa fa-map-marker"></i>
+						<h3>Address</h3>
+						<p>1739 Bubby Drive</p>
+					</div>
+				</div>
+				<!-- /contact -->
+
+				<!-- contact form -->
+				<div class="col-md-8 col-md-offset-2">
+					<form class="contact-form">
+						<input type="text" class="input" placeholder="Name">
+						<input type="email" class="input" placeholder="Email">
+						<input type="text" class="input" placeholder="Subject">
+						<textarea class="input" placeholder="Message"></textarea>
+						<button class="main-btn">Send message</button>
+					</form>
+				</div>
+				<!-- /contact form -->
+
+			</div>
+			<!-- /Row -->
+
+		</div>
+		<!-- /Container -->
+
+	</div>
+	<!-- /Contact -->
+
+    {% include 'app/footer.html' %}
 </div>
-    <p><button class="btn btn-primary btn-large" id="registerNewUser">Register &raquo;</button></p>
-    <p><a href="https://www.djangoproject.com/" class="btn btn-primary btn-large">Sign in &raquo;</a></p>
-
-</div>
-
-<script src="//code.jquery.com/jquery-1.9.1.js"></script>
 <script>
-    $(document).ready(function(){
-     function csrfSafeMethod(method) {
-                    // these HTTP methods do not require CSRF protection
-                    return (/^(GET|HEAD|OPTIONS|TRACE)$/.test(method));
-                }
-   
-    $('#registerNewUser').click(function () {
-    $.ajaxSetup({
-                    beforeSend: function(xhr, settings) {
-                        if (!csrfSafeMethod(settings.type) && !this.crossDomain) {
-                            xhr.setRequestHeader("X-CSRFToken", '{{ csrf_token }}');
-                        }
-                    }
+    $(document).ready(function () {
+        	$('body').scrollspy({
+		target: '#nav',
+		offset: $(window).height() / 2
+	});
 
-                });
-        var fd = new FormData(document.getElementById("fileinfo"));
-        fd.append("username", $('#username').val());
-        fd.append("first_name", $('#first_name').val());
-        fd.append("last_name", $('#last_name').val());
-        fd.append("postal_code", $('#postal_code').val());
-        fd.append("country", $('#country').val());
-        fd.append("phone", $('#phone').val());
-        fd.append("bday", "2000-12-12");
-        fd.append("adress", $('#adress').val());
-        fd.append("email", $('#email').val());
-        fd.append("password", $('#password').val());
-        fd.append("recapcha", grecaptcha.getResponse());
-        fd.append("csrfmiddlewaretoken", '{{ csrf_token }}');
-        $("#registerNewUser").prop("disabled",true);
-        $.ajax({
-           url: "{% url 'register' %}",
-           type: "post", // or "get"
-           
-              processData: false,  // tell jQuery not to process the data
-              contentType: false,
-           dataType: 'json',
-           data: fd,
-           success: function(data) {
-           alert(data['result'])
-           $("#registerNewUser").prop("disabled",false);
-    }});
-     }); });
+    });
 </script>
-{% endblock %}
+{%endblock content%}

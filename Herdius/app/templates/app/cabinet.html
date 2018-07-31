@@ -1,0 +1,320 @@
+﻿{% extends "app/layout.html" %}
+
+{% block content %}
+{% load staticfiles %}
+<!--links-->
+	<link rel="stylesheet" href="{% static 'app/content/registration.css' %}">
+	<link rel="stylesheet" href="{% static 'app/content/datepicker.min.css' %}">
+	<link rel="stylesheet" href="{% static 'app/content/validator.css' %}">
+	<link rel="stylesheet" href="{% static 'app/content/cabinet.css' %}">
+<!--/links-->
+		<!-- Background Image -->
+		<div class="bg-img" style="background-image: url('{% static 'app/img/background1.jpg' %}'); position: fixed">
+			<div class="overlay"></div>
+		</div>
+		<!-- /Background Image -->
+
+<!-- Top content -->
+        <div class="top-content">
+        	
+            <div class="inner-bg">
+                <div class="container">
+                    <div class="row">
+                        <div class="col-sm-8 col-sm-offset-2 text">
+                            <h1><strong>{{user.first_name}} {{user.last_name}}</strong> settings</h1>
+                            <div class="description">
+                            	<p>
+	                            	You can edit settings here
+                            	</p>
+                            	<p>
+	                            	
+                            	</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="row">
+                        <div class="col-md-12 form-bottom">
+                        <div class="col-md-3">
+                            <div class="text-center">
+                                <img class="company-header-avatar " alt="avatar" id="ava" style="background-image:url('/media/{{user.avatar}}')">
+                                <p>Change avatar...</p>
+                                <form method="post" id="fileinfo" name="fileinfo" onsubmit="return submitForm();" class="registration-form">
+                                        <input type="file"  class="form-control-file" name="avatar" id="avatar" required=""/>
+                                <p></p>
+                                    <img class="company-header-avatar " alt="avatar" id="pic_id" style="background-image:url('{{user.image_id}}')">
+                                <p>Change id...</p>
+                                        <input type="file"  class="form-control-file" name="picture_id" id="picture_id" required="" />
+                                </form>
+                              </div>
+                                  <div class="panel panel-default">
+                                    <div class="panel-heading">Website <i class="fa fa-link fa-1x"></i></div>
+                                    <div class="panel-body"><a href="http://bootnipets.com">bootnipets.com</a></div>
+                                  </div>
+          
+                                  <ul class="list-group">
+                                    <li class="list-group-item text-muted">Activity <i class="fa fa-dashboard fa-1x"></i></li>
+                                    <li class="list-group-item text-right"><span class="pull-left"><strong>Shares</strong></span> 125</li>
+                                    <li class="list-group-item text-right"><span class="pull-left"><strong>Likes</strong></span> 13</li>
+                                    <li class="list-group-item text-right"><span class="pull-left"><strong>Posts</strong></span> 37</li>
+                                    <li class="list-group-item text-right"><span class="pull-left"><strong>Followers</strong></span> 78</li>
+                                  </ul> 
+               
+                                  <div class="panel panel-default">
+                                    <div class="panel-heading">Social Media</div>
+                                    <div class="panel-body">
+            	                        <i class="fa fa-facebook fa-2x"></i> <i class="fa fa-github fa-2x"></i> <i class="fa fa-twitter fa-2x"></i> <i class="fa fa-pinterest fa-2x"></i> <i class="fa fa-google-plus fa-2x"></i>
+                                    </div>
+                                  </div>
+                        </div>
+                        <div class="col-md-8 col-md-offset-1">
+                         <div >    
+                            <form method="post" id="fileinfo1" name="fileinfo1" onsubmit="return submitForm();" class="registration-form">
+				                    	<div class="form-group">
+				                    		<label class="sr-only" for="form-user-name">User name</label>
+				                        	<input type="text" name="username" placeholder="User name..." class="form-user-name form-control" id="username" value="{{user.username}}">
+				                        </div>
+				                    	<div class="form-group">
+				                    		<label class="sr-only" for="form-first-name">First name</label>
+				                        	<input type="text" name="first_name" placeholder="First name..." class="form-first-name form-control" id="first_name" value="{{user.first_name}}">
+				                        </div>
+				                        <div class="form-group">
+				                        	<label class="sr-only" for="form-last-name">Last name</label>
+				                        	<input type="text" name="last_name" placeholder="Last name..." class="form-last-name form-control" id="last_name" value="{{user.last_name}}">
+				                        </div>
+				                        <div class="form-group">
+				                        	<label class="sr-only" for="form-birthday">Birthday</label>
+				                        	<input type="text" name="bday" placeholder="Birthday..." class="form-birthday datepicker-here form-control" id="bday" data-position="right center" >
+				                        </div>
+                                        <div class="form-group">
+				                    		<label class="sr-only" for="form-country">Country</label>
+				                        	<input type="text" name="country" placeholder="Country..." class="form-country form-control" id="country" value="{{user.country}}">
+				                        </div>
+				                        <div class="form-group">
+				                        	<label class="sr-only" for="form-twitter">City, adress...</label>
+				                        	<textarea name="adress" placeholder="City, adress..." 
+				                        				class="form-address form-control" id="adress">{{user.address}}</textarea>
+				                        </div>
+				                        <div class="form-group">
+				                        	<label class="sr-only" for="form-postal-code">Postal code</label>
+				                        	<input type="text" name="postal_code" placeholder="Postal code..." class="form-postal-code form-control" id="postal_code" value="{{user.postal_code}}">
+				                        </div>
+				                        <div class="form-group">
+				                        	<label class="sr-only" for="form-phone">Phone</label>
+				                        	<input type="text" name="phone" placeholder="Phone..." class="form-phone form-control" id="phone" value="{{user.phone}}">
+				                        </div>
+                                        <div class="form-group">
+				                        	<label class="sr-only" for="form-email">Email</label>
+				                        	<input type="text" name="email" placeholder="Email..." class="form-email form-control" id="email" value="{{user.email}}">
+				                        </div>          
+                              </form>
+				                        </div>
+				             <button type="button"  id="save" class="btn">Save</button>
+				         </div>
+                        </div>
+                    </div>
+                    </div>
+                </div>
+            </div>
+            
+
+        <script src="{% static 'app/scripts/jquery.validate.min.js' %}"></script>
+        <script src="{% static 'app/scripts/jquery-1.11.1.min.js' %}"></script>
+        <script src="{% static 'app/scripts/bootstrap.min.js' %}"></script>
+        <script src="{% static 'app/scripts/jquery.backstretch.js' %}"></script>
+        <script src="{% static 'app/scripts/retina-1.1.0.min.js' %}"></script>
+        <script src="{% static 'app/scripts/scripts.js' %}"></script>
+        <script src="{% static 'app/scripts/datepicker.min.js' %}"></script>
+        <script src="{% static 'app/scripts/jquery.validate.min.js' %}"></script>
+        <script src="{% static 'app/scripts/validate.js' %}"></script>
+        <script src="{% static 'app/scripts/jquery.validate.unobtrusive.min.js' %}"></script>
+        <script src="https://ajax.aspnetcdn.com/ajax/jquery.validate/1.15.0/additional-methods.js"></script>
+
+<script>
+            $('#bday').datepicker({
+                language: 'en'
+            })
+                ;(function ($) { $.fn.datepicker.language['en'] = {
+                days: ['Sunday', 'Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday', 'Saturday'],
+                daysShort: ['Sun', 'Mon', 'Tue', 'Wed', 'Thu', 'Fri', 'Sat'],
+                daysMin: ['Su', 'Mo', 'Tu', 'We', 'Th', 'Fr', 'Sa'],
+                months: ['January','February','March','April','May','June', 'July','August','September','October','November','December'],
+                monthsShort: ['Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun', 'Jul', 'Aug', 'Sep', 'Oct', 'Nov', 'Dec'],
+                today: 'Today',
+                clear: 'Clear',
+                dateFormat: 'yyyy-mm-dd',
+                timeFormat: 'hh:ii aa',
+                firstDay: 0
+            };
+            })(jQuery);
+                $('#bday').keydown(function(e){
+                    e.preventDefault();
+    });
+            </script>    
+
+        <script>
+            jQuery.validator.setDefaults({
+              debug: true,
+              success: "valid"
+            });
+            var s = $("#fileinfo").validate({
+                    rules: {
+
+                        username: {
+                            required: true,
+                            minlength: 6,
+                            maxlength: 16,
+                        },
+
+                        first_name: {
+                            required: true,
+                            minlength: 2,
+                            maxlength: 16,
+                        },
+
+                        last_name: {
+                            required: true,
+                            minlength: 2,
+                            maxlength: 16,
+                        },
+
+                        postal_code: {
+                            required: true,
+                            minlength: 6,
+                            digits: true,
+                        },
+
+                        country: {
+                            required: true,
+                            minlength: 2,
+                            maxlength: 16,
+                        },
+
+                        phone: {
+                            required: true,
+                            minlength: 6,
+                            digits: true
+                        },
+
+                        bday: {
+                            required: true,
+                            minlength: 6,
+                            maxlength: 16,
+                        },
+
+
+                        adress: {
+                            required: true,
+                            minlength: 6,
+                            maxlength: 16,
+                        },
+
+                        email: {
+                            required: true,
+                            email: true
+                        },
+
+                        password: {
+                            required: true,
+                            minlength: 6,
+                            equalTo: "#password1"
+                        },
+
+                        password1: {
+                            required: true,
+                            minlength: 6,
+                            equalTo: "#password"
+                        },
+                        
+                        avatar: {
+                            required: false,
+                            accept: "image/jpeg, image/pjpeg"
+                        },
+
+                        picture_id: {
+                            required: false,
+                            accept: "image/jpeg, image/pjpeg"
+                        },
+                    },
+                });
+        </script>
+
+<script>    
+    $(document).ready(function(){
+    
+        $("#bday").val('{{user.bday|date:'Y-m-d'}}');
+    });
+     function csrfSafeMethod(method) {
+                    // these HTTP methods do not require CSRF protection
+                    return (/^(GET|HEAD|OPTIONS|TRACE)$/.test(method));
+                }
+   
+    $("#save").click(function () {
+     s.valid();
+    if (!(s.element("#email") & s.element("#first_name") & s.element("#last_name") & s.element("#username") & s.element("#adress") & s.element("#postal_code") & s.element("#phone") & s.element("#country") & s.element("#picture_id") & s.element("#avatar"))) {
+        return;
+     };
+    $.ajaxSetup({
+                    beforeSend: function(xhr, settings) {
+                        if (!csrfSafeMethod(settings.type) && !this.crossDomain) {
+                            xhr.setRequestHeader("X-CSRFToken", '{{ csrf_token }}');
+                        }
+                    }
+                });
+        var fd = new FormData(document.getElementById("fileinfo"));
+        fd.append("username", $('#username').val());
+        fd.append("first_name", $('#first_name').val());
+        fd.append("last_name", $('#last_name').val());
+        fd.append("postal_code", $('#postal_code').val());
+        fd.append("country", $('#country').val());
+        fd.append("phone", $('#phone').val());
+        fd.append("bday", $('#bday').val());
+        fd.append("adress", $('#adress').val());
+        fd.append("email", $('#email').val());
+        fd.append("password", $('#password').val());
+        fd.append("csrfmiddlewaretoken", '{{ csrf_token }}');
+        $.ajax({
+           url: "{% url 'edit' %}",
+           type: "post", // or "get"
+           
+              processData: false,  // tell jQuery not to process the data
+              contentType: false,
+           dataType: 'json',
+           data: fd,
+           success: function(data) {
+           alert(data['result'])
+    }});
+     }); 
+</script>
+
+<script>
+        function readURL(input) {
+        if (input.files && input.files[0]) {
+            var reader = new FileReader();
+            
+            reader.onload = function (e) {
+                $('#ava').css('background-image', 'url(' + e.target.result + ')');
+            }
+            
+            reader.readAsDataURL(input.files[0]);
+        }
+    }
+    
+    $("#avatar").change(function(){
+        readURL(this);
+    });
+    function readURL1(input) {
+        if (input.files && input.files[0]) {
+            var reader = new FileReader();
+            reader.onload = function (e) {
+                $('#pic_id').css('background-image', 'url(' + e.target.result + ')');
+            }
+            reader.readAsDataURL(input.files[0]);
+        }
+    }
+    
+    $("#picture_id").change(function(){
+        readURL1(this);
+    });
+</script>
+{% endblock content %}

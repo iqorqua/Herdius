@@ -1,10 +1,129 @@
-{% extends "app/layout.html" %}
+﻿{% extends "app/layout.html" %}
+{% load staticfiles %}
+
+{% block styles %}
+        <link rel="stylesheet" type="text/css" href="{% static 'app/content/validator.css' %}" />
+{% endblock styles %}
 
 {% block content %}
+<div class="container">
+            <div class="jumbotron">
+                <h2>Настройки</h2>
+            </div>
+</div>
+<form action="" method="post" role="form" class="form-horizontal" id="validate-me-plz">
+                {% csrf_token %}
+    
+{% for k, v in settings_items.items %}
+        <div class="form-group">
+        <div class="col-md-12 ">
+             <label class="col-md-2 control-label">{{k}}</label>
+             <textarea class="form-control" name="{{k|cut:" "}}"  rows="3" style="min-width: 70%">{{v}}</textarea>
+        </div>
+        </div>
+{% endfor %}
+    
+    <div class="form-group">
+        <div class="col-md-9 col-md-offset-1">
+          <button type="submit" class="btn btn-primary btn-lg" style="float:right">Сохранить</button>
+        </div>
+    </div>
+</form>
+{% endblock content%}
 
-<h2>{{ title }}.</h2>
-<h3>{{ message }}</h3>
+{% block settings %}
+<script src="{% static 'app/scripts/jquery.validate.min.js' %}"></script>
+<script>
+    
+    jQuery.extend(jQuery.validator.messages, {
+        required: "Поле не может быть пустым!",
+        maxlength: jQuery.validator.format("Длина токена больше {0}!"),
+        minlength: jQuery.validator.format("Длина токена меньше {0}!")
+    })
+    $("#validate-me-plz").validate({
+        rules: {
+            Токенбота: {
+                required: true,
+                minlength: 45,
+                maxlength: 45
 
-<p>Use this area to provide additional information.</p>
+            },
 
-{% endblock %}
+            Приветствие: {
+                required: true,
+                minlength: 1,
+                maxlength: 200
+            },
+            
+            Просьба: {
+                required: true,
+                minlength: 1,
+                maxlength: 200
+            },
+
+            Спроситьпол: {
+                required: true,
+                minlength: 1,
+                maxlength: 200
+            },
+
+            Какузналионас: {
+                required: true,
+                minlength: 1,
+                maxlength: 200
+            },
+
+            Роддеятельности: {
+                required: true,
+                minlength: 1,
+                maxlength: 200
+            },
+
+            Последнийвопрос: {
+                required: true,
+                minlength: 1,
+                maxlength: 200
+            },
+            
+            Какоехобби: {
+                required: true,
+                minlength: 1,
+                maxlength: 200
+            },
+            
+            Спасибо: {
+                required: true,
+                minlength: 1,
+                maxlength: 200
+            },
+            
+            Имяадминистратора: {
+                required: true,
+                minlength: 1,
+                maxlength: 25
+            },
+            
+            Контактадминистратора: {
+                required: true,
+                minlength: 13,
+                maxlength: 13
+            },
+            
+            Онас: {
+                required: true,
+                minlength: 1,
+                maxlength: 812
+            },
+            
+
+        },
+        errorElement: "error",  // a wrapper around the error message
+        errorPlacement: function (error, element) {
+            offset = element.offset();
+            error.insertBefore(element)
+            error.addClass('message');  // add a class to the wrapper
+            error.addClass('badge red');
+        }
+    });
+</script>
+{% endblock settings %}

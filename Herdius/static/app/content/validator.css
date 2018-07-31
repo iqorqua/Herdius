@@ -1,0 +1,32 @@
+input {
+    padding: 5px;
+}
+
+    input.error {
+        border: 1px solid #99182c;
+    }
+
+span.arrow {
+    height: 17px;
+    background: url('http://i45.tinypic.com/f9ifz6.png') no-repeat center left;
+    top: 4px;
+}
+
+.error{
+    border-top: 1px solid #99182c;
+    border-bottom: 1px solid #99182c;
+    border-right: 1px solid #99182c;
+    border-left: 1px solid #99182c;
+    color: black;
+    padding: 1px 5px 1px 5px;
+    font-size: small;
+}
+.input-block-level {
+    display: block;
+    width: 100%;
+    min-height: 28px;
+    // Make inputs at least the height of their button counterpart .box-sizing(border-box);
+    // Makes inputs behave like true block-level elements
+}
+
+

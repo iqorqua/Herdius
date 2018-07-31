@@ -1,0 +1,310 @@
+﻿{% extends "app/layout.html" %}
+
+{% block content %}
+{% load staticfiles %}
+<!--links-->
+	<link rel="stylesheet" href="{% static 'app/content/registration.css' %}">
+	<link rel="stylesheet" href="{% static 'app/content/datepicker.min.css' %}">
+<!--/links-->
+		<!-- Background Image -->
+		<div class="bg-img" style="background-image: url('{% static 'app/img/background1.jpg' %}'); position: fixed">
+			<div class="overlay"></div>
+		</div>
+		<!-- /Background Image -->
+
+<!-- Top content -->
+        <div class="top-content">
+        	
+            <div class="inner-bg">
+                <div class="container">
+                    <div class="row">
+                        <div class="col-sm-8 col-sm-offset-2 text">
+                            <h1><strong>Herdius</strong> Multi Step Registration</h1>
+                            <div class="description">
+                            	<p>
+	                            	Answer few questions to pass registration...
+                            	</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-sm-6 col-sm-offset-3 form-box">
+                        		<div class="form-box rhomb">
+                                </div>
+                        	
+                        	<form method="post" id="fileinfo" name="fileinfo" onsubmit="return submitForm();" class="registration-form">
+                        		<fieldset>
+		                        	<div class="form-top clipPolygon">
+		                        		<div class="form-top-left">
+		                        			<h3>Step 1 / 3</h3>
+		                            		<p>Tell us who you are:</p>
+		                        		</div>
+		                        		<div class="form-top-right">
+		                        			<i class="fa fa-user"></i>
+		                        		</div>
+		                            </div>
+		                            <div class="form-bottom">                                        
+				                    	<div class="form-group">
+				                    		<label class="sr-only" for="form-user-name">User name</label>
+				                        	<input type="text" name="username" placeholder="User name..." class="form-user-name form-control" id="username">
+				                        </div>
+				                    	<div class="form-group">
+				                    		<label class="sr-only" for="form-first-name">First name</label>
+				                        	<input type="text" name="first_name" placeholder="First name..." class="form-first-name form-control" id="first_name">
+				                        </div>
+				                        <div class="form-group">
+				                        	<label class="sr-only" for="form-last-name">Last name</label>
+				                        	<input type="text" name="last_name" placeholder="Last name..." class="form-last-name form-control" id="last_name">
+				                        </div>
+				                        <div class="form-group">
+				                        	<label class="sr-only" for="form-birthday">Birthday</label>
+				                        	<input type="text" name="bday" placeholder="Birthday..." class="form-birthday datepicker-here form-control" id="bday" data-position="right center">
+				                        </div>
+				                        <button type="button"  class="btn btn-next1">Next</button>
+				                    </div>
+			                    </fieldset>
+			                    
+			                    <fieldset>
+		                        	<div class="form-top clipPolygon">
+		                        		<div class="form-top-left">
+		                        			<h3>Step 2 / 3</h3>
+		                            		<p>More info about you:</p>
+		                        		</div>
+		                        		<div class="form-top-right">
+		                        			<i class="fa fa-home"></i>
+		                        		</div>
+		                            </div>
+		                            <div class="form-bottom">
+				                    	<div class="form-group">
+				                    		<label class="sr-only" for="form-country">Country</label>
+				                        	<input type="text" name="country" placeholder="Country..." class="form-country form-control" id="country">
+				                        </div>
+				                        <div class="form-group">
+				                        	<label class="sr-only" for="form-twitter">City, adress...</label>
+				                        	<textarea name="adress" placeholder="City, adress..." 
+				                        				class="form-address form-control" id="adress"></textarea>
+				                        </div>
+				                        <div class="form-group">
+				                        	<label class="sr-only" for="form-postal-code">Postal code</label>
+				                        	<input type="text" name="postal_code" placeholder="Postal code..." class="form-postal-code form-control" id="postal_code">
+				                        </div>
+				                        <div class="form-group">
+				                        	<label class="sr-only" for="form-phone">Phone</label>
+				                        	<input type="text" name="phone" placeholder="Phone..." class="form-phone form-control" id="phone">
+				                        </div>
+				                        <button type="button" class="btn btn-previous">Previous</button>
+				                        <button type="button" class="btn btn-next2">Next</button>
+				                    </div>
+			                    </fieldset>
+			                    
+			                    <fieldset>
+		                        	<div class="form-top clipPolygon">
+		                        		<div class="form-top-left">
+		                        			<h3>Step 2 / 3</h3>
+		                            		<p>Set up your account:</p>
+		                        		</div>
+		                        		<div class="form-top-right">
+		                        			<i class="fa fa-key"></i>
+		                        		</div>
+		                            </div>
+		                            <div class="form-bottom">
+				                        <div class="form-group">
+				                        	<label class="sr-only" for="form-email">Email</label>
+				                        	<input type="text" name="email" placeholder="Email..." class="form-email form-control" id="email">
+				                        </div>
+				                        <div class="form-group">
+				                    		<label class="sr-only" for="form-password">Password</label>
+				                        	<input type="password" name="password" placeholder="Password..." class="form-password form-control" id="password">
+				                        </div>
+				                        <div class="form-group">
+				                        	<label class="sr-only" for="form-repeat-password">Repeat password</label>
+				                        	<input type="password" name="password1" placeholder="Repeat password..." 
+				                        				class="form-repeat-password form-control" id="password1">
+                                        <input type="file"  class="form-control-file" name="avatar" id="avatar" required=""/>
+                                        <input type="file"  class="form-control-file" name="picture_id" id="picture_id" required="" />
+				                        </div>
+                                        <script src='https://www.google.com/recaptcha/api.js'></script>
+                                        <div class="g-recaptcha" data-sitekey="6LdRAmIUAAAAAMuzveig6oGUVTG60xMCpx-2dBTd" id="re"></div>
+				                        <button type="button" class="btn btn-previous">Previous</button>
+				                        <button type="button" id="registerNewUser" class="btn signin">Sign me up!</button>
+				                    </div>
+			                    </fieldset>
+		                    
+		                    </form>
+		                    
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+        </div>
+
+        <script src="{% static 'app/scripts/jquery.validate.min.js' %}"></script>
+        <script src="{% static 'app/scripts/jquery-1.11.1.min.js' %}"></script>
+        <script src="{% static 'app/scripts/bootstrap.min.js' %}"></script>
+        <script src="{% static 'app/scripts/jquery.backstretch.js' %}"></script>
+        <script src="{% static 'app/scripts/retina-1.1.0.min.js' %}"></script>
+        <script src="{% static 'app/scripts/scripts.js' %}"></script>
+        <script src="{% static 'app/scripts/datepicker.min.js' %}"></script>
+        <script src="{% static 'app/scripts/jquery.validate.min.js' %}"></script>
+        <script src="{% static 'app/scripts/validate.js' %}"></script>
+        <script src="{% static 'app/scripts/jquery.validate.unobtrusive.min.js' %}"></script>
+        <script src="https://ajax.aspnetcdn.com/ajax/jquery.validate/1.15.0/additional-methods.js"></script>
+        <script>
+            $('#bday').datepicker({
+                language: 'en'
+            })
+                ;(function ($) { $.fn.datepicker.language['en'] = {
+                days: ['Sunday', 'Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday', 'Saturday'],
+                daysShort: ['Sun', 'Mon', 'Tue', 'Wed', 'Thu', 'Fri', 'Sat'],
+                daysMin: ['Su', 'Mo', 'Tu', 'We', 'Th', 'Fr', 'Sa'],
+                months: ['January','February','March','April','May','June', 'July','August','September','October','November','December'],
+                monthsShort: ['Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun', 'Jul', 'Aug', 'Sep', 'Oct', 'Nov', 'Dec'],
+                today: 'Today',
+                clear: 'Clear',
+                dateFormat: 'yyyy-mm-dd',
+                timeFormat: 'hh:ii aa',
+                firstDay: 0
+            };
+            })(jQuery);
+                $('#bday').keydown(function(e){
+                    e.preventDefault();
+                });
+            </script>    
+        <script>
+            jQuery.validator.setDefaults({
+              debug: true,
+              success: "valid"
+            });
+            var s = $("#fileinfo").validate({
+                    rules: {
+
+                        username: {
+                            required: true,
+                            minlength: 6,
+                            maxlength: 16,
+                        },
+
+                        first_name: {
+                            required: true,
+                            minlength: 2,
+                            maxlength: 16,
+                        },
+
+                        last_name: {
+                            required: true,
+                            minlength: 2,
+                            maxlength: 16,
+                        },
+
+                        postal_code: {
+                            required: true,
+                            minlength: 6,
+                            digits: true,
+                        },
+
+                        country: {
+                            required: true,
+                            minlength: 2,
+                            maxlength: 16,
+                        },
+
+                        phone: {
+                            required: true,
+                            minlength: 6,
+                            digits: true
+                        },
+
+                        bday: {
+                            required: true,
+                            minlength: 6,
+                            maxlength: 16,
+                        },
+
+
+                        adress: {
+                            required: true,
+                            minlength: 6,
+                            maxlength: 16,
+                        },
+
+                        email: {
+                            required: true,
+                            email: true
+                        },
+
+                        password: {
+                            required: true,
+                            minlength: 6,
+                            equalTo: "#password1"
+                        },
+
+                        password1: {
+                            required: true,
+                            minlength: 6,
+                            equalTo: "#password"
+                        },
+                        
+                        avatar: {
+                            required: true,
+                            accept: "image/jpeg, image/pjpeg"
+                        },
+
+                        picture_id: {
+                            required: true,
+                            accept: "image/jpeg, image/pjpeg"
+                        },
+                    },
+                });
+        </script>
+
+
+<script>    
+    $(document).ready(function(){
+    });
+     function csrfSafeMethod(method) {
+                    // these HTTP methods do not require CSRF protection
+                    return (/^(GET|HEAD|OPTIONS|TRACE)$/.test(method));
+                }
+   
+    $(".signin").click(function () {
+     s.valid();
+     if (!(s.element("#email") & s.element("#password1") & s.element("#password") & s.element("#avatar") & s.element("#picture_id"))) {
+        return;
+     };
+    $.ajaxSetup({
+                    beforeSend: function(xhr, settings) {
+                        if (!csrfSafeMethod(settings.type) && !this.crossDomain) {
+                            xhr.setRequestHeader("X-CSRFToken", '{{ csrf_token }}');
+                        }
+                    }
+                });
+        var fd = new FormData(document.getElementById("fileinfo"));
+        fd.append("username", $('#username').val());
+        fd.append("first_name", $('#first_name').val());
+        fd.append("last_name", $('#last_name').val());
+        fd.append("postal_code", $('#postal_code').val());
+        fd.append("country", $('#country').val());
+        fd.append("phone", $('#phone').val());
+        fd.append("bday", $('#bday').val());
+        fd.append("adress", $('#adress').val());
+        fd.append("email", $('#email').val());
+        fd.append("password", $('#password').val());
+        fd.append("recapcha", grecaptcha.getResponse());
+        fd.append("csrfmiddlewaretoken", '{{ csrf_token }}');
+        $("#registerNewUser").prop("disabled",true);
+        $.ajax({
+           url: "{% url 'register' %}",
+           type: "post", // or "get"
+           
+              processData: false,  // tell jQuery not to process the data
+              contentType: false,
+           dataType: 'json',
+           data: fd,
+           success: function(data) {
+           alert(data['result'])
+           $("#registerNewUser").prop("disabled",false);
+    }});
+     }); 
+</script>
+{% endblock %}

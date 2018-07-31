@@ -1,16 +1,27 @@
 {% if user.is_authenticated %}
 <form id="logoutForm" action="/logout" method="post" class="navbar-right">
     {% csrf_token %}
-    <ul class="nav navbar-nav navbar-right">
-        <li><span class="navbar-brand">Hello {{ user.username }}!</span></li>
-        <li><a href="javascript:document.getElementById('logoutForm').submit()">Log off</a></li>
+    {%load staticfiles%}
+	<link rel="stylesheet" href="{% static 'app/content/cabinet.css' %}">
+    <ul class="main-nav nav navbar-nav navbar-right">
+        <li class="has-dropdown"><!--<a href="/cabinet">{{ user.username }}</a>-->
+        <div class="navbar-brand">
+						<a href="/">
+							<!--<img class="logo" src="{% static 'app/img/logo.png' %}" alt="logo"-->
+							<img class="ava-little" style="background-image:url('media/{{ user.avatar }}')"  >
+						</a>
+					</div>
+						<ul class="dropdown">
+							<li><a href="javascript:document.getElementById('logoutForm').submit()">Log off ({{ user.username }})</a></li>
+						</ul>
+					</li>
     </ul>
 
 </form>
 
 {% else %}
 
-<ul class="nav navbar-nav navbar-right">
+<ul class="main-nav nav navbar-nav navbar-right">
     <li><a href="{% url 'login' %}">Log in</a></li>
 </ul>
 

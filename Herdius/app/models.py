@@ -11,7 +11,7 @@ from django.conf import settings
 #    EncryptedImageField
 #)
 
-class MyUser(AbstractUser):
+class MyUser(AbstractUser): 
     country=models.CharField(max_length=30, blank=False)
     address=models.TextField(max_length=500, blank=False)
     postal_code=models.CharField(max_length=30, blank=False)

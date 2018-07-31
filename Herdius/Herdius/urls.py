@@ -22,6 +22,8 @@ urlpatterns = [
     url(r'^$', app.views.home, name='home'),
     url(r'^contact$', app.views.contact, name='contact'),
     url(r'^about', app.views.about, name='about'),
+    url(r'^cabinet', app.views.cabinet, name='cabinet'),
+    url(r'^registration', app.views.registration, name='registration'),
     url(r'^login/$',
         django.contrib.auth.views.login,
         {
@@ -47,6 +49,7 @@ urlpatterns = [
     # Uncomment the next line to enable the admin:
     url(r'^admin/', include(admin.site.urls)),
     url(r'^register/$', app.views.register, name='register'),
+    url(r'^edit/$', app.views.edit, name='edit'),
 ]
 
 urlpatterns += static(settings.STATIC_URL, document_root=settings.STATIC_ROOT)
