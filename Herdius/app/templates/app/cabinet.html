@@ -5,7 +5,6 @@
 <!--links-->
 	<link rel="stylesheet" href="{% static 'app/content/registration.css' %}">
 	<link rel="stylesheet" href="{% static 'app/content/datepicker.min.css' %}">
-	<link rel="stylesheet" href="{% static 'app/content/validator.css' %}">
 	<link rel="stylesheet" href="{% static 'app/content/cabinet.css' %}">
 <!--/links-->
 		<!-- Background Image -->
@@ -237,6 +236,20 @@
                         },
                     },
                 });
+            var s1 = $("#fileinfo").validate({
+                    rules: {
+                        
+                        avatar: {
+                            required: false,
+                            accept: "image/jpeg, image/pjpeg"
+                        },
+
+                        picture_id: {
+                            required: false,
+                            accept: "image/jpeg, image/pjpeg"
+                        },
+                    },
+                });
         </script>
 
 <script>    
@@ -251,7 +264,8 @@
    
     $("#save").click(function () {
      s.valid();
-    if (!(s.element("#email") & s.element("#first_name") & s.element("#last_name") & s.element("#username") & s.element("#adress") & s.element("#postal_code") & s.element("#phone") & s.element("#country") & s.element("#picture_id") & s.element("#avatar"))) {
+     s1.valid();
+    if (!(s.element("#email") & s.element("#first_name") & s.element("#last_name") & s.element("#username") & s.element("#adress") & s.element("#postal_code") & s.element("#phone") & s.element("#country") & s1.element("#picture_id") & s1.element("#avatar"))) {
         return;
      };
     $.ajaxSetup({
