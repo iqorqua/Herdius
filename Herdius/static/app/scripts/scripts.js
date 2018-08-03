@@ -1,6 +1,57 @@
+$(".btn-next1").click(function (event) {
+    if (user_exists) {
+        return 1;
+    }
+        s.valid();
+        if ((!user_exists) && s.element("#username") && s.element("#first_name") && s.element("#last_name") && s.element("#bday")) {
+            next($(this));
+        };
 
+});
+$(".btn-next2").click(function () {
+    s.valid();
+    if (s.element("#country") & s.element("#phone") & s.element("#adress") & s.element("#postal_code")) {
+        next($(this));
+    };
+});
+
+function csrfSafeMethod(method) {
+    // these HTTP methods do not require CSRF protection
+    return (/^(GET|HEAD|OPTIONS|TRACE)$/.test(method));
+}
+function next(button) {
+    if (user_exists) { return 0 };
+    var parent_fieldset = button.parents('fieldset');
+    var next_step = true;
+
+    parent_fieldset.find('input[type="text"], input[type="password"], textarea').each(function () {
+        if ($(this).val() == "") {
+            $(this).addClass('input-error');
+            next_step = false;
+        }
+        else {
+            $(this).removeClass('input-error');
+        }
+    });
+
+    if (next_step) {
+        if (user_exists) {
+            return 1;
+        }
+        parent_fieldset.fadeOut(400, function () {
+            $(this).next().fadeIn();
+        });
+    }
+};
 jQuery(document).ready(function() {
-	
+
+    $.ajaxSetup({
+        beforeSend: function (xhr, settings) {
+            if (!csrfSafeMethod(settings.type) && !this.crossDomain) {
+                xhr.setRequestHeader("X-CSRFToken", '{{ csrf_token }}');
+            }
+        }
+    });
     /*
         Fullscreen background
     */
@@ -23,28 +74,29 @@ jQuery(document).ready(function() {
     });
     
     // next step
-    $('.registration-form .btn-next').on('click', function() {
-    	var parent_fieldset = $(this).parents('fieldset');
-    	var next_step = true;
-    	
-    	parent_fieldset.find('input[type="text"], input[type="password"], textarea').each(function() {
-    		if( $(this).val() == "" ) {
-    			$(this).addClass('input-error');
-    			next_step = false;
-    		}
-    		else {
-    			$(this).removeClass('input-error');
-    		}
-    	});
-    	
-    	if( next_step ) {
-    		parent_fieldset.fadeOut(400, function() {
-	    		$(this).next().fadeIn();
-	    	});
-    	}
-    	
+    $('.registration-form .btn-next1').on('click', function () {
+        var parent_fieldset = $(this).parents('fieldset');
+        var next_step = true;
+
+        parent_fieldset.find('input[type="text"], input[type="password"], textarea').each(function () {
+            if ($(this).val() == "") {
+                $(this).addClass('input-error');
+                next_step = false;
+            }
+            else {
+                $(this).removeClass('input-error');
+            }
+        });
+
+        if (next_step) {
+            parent_fieldset.fadeOut(400, function () {
+                $(this).next().fadeIn();
+            });
+        }
+
     });
     
+
     // previous step
     $('.registration-form .btn-previous').on('click', function() {
     	$(this).parents('fieldset').fadeOut(400, function() {

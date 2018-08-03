@@ -1,0 +1,17 @@
+sys
+unicode_literals
+MIMEText
+MIMEMultipart
+os
+__builtins__
+__file__
+MIMEBase
+__cached__
+Message
+print_function
+encode_base64
+guess_type
+__name__
+unicode_type
+__package__
+__spec__

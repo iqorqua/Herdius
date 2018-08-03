@@ -1,0 +1,46 @@
+.company-header-avatar {
+    -webkit-clip-path: circle(35.7% at 50% 48%);
+    clip-path: circle(45% at 50% 48%);
+    width: 200px;
+    height: 200px;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: 50% 50%;
+}
+.ava-little {
+    -webkit-clip-path: circle(35.7% at 50% 48%);
+    clip-path: circle(45% at 50% 48%);
+    width: 50px;
+    height: 50px;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: 50% 50%;
+}
+
+label {
+    position: static;
+}
+
+input.error {
+    border: 2px solid #99182c;
+}
+
+span.arrow {
+    height: 17px;
+    background: url('http://i45.tinypic.com/f9ifz6.png') no-repeat center left;
+    top: 4px;
+}
+
+.error {
+    color: #939393;
+    padding: 15px 5px 1px 5px;
+    font-size: medium;
+}
+
+.input-block-level {
+    display: block;
+    width: 100%;
+    min-height: 28px;
+    // Make inputs at least the height of their button counterpart .box-sizing(border-box);
+    // Makes inputs behave like true block-level elements
+}

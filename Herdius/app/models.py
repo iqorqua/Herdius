@@ -19,6 +19,9 @@ class MyUser(AbstractUser):
     bday = models.DateField(null=False, blank=False)
     avatar = models.ImageField(upload_to = 'avatars/', default = 'pic_folder/no-img.jpg', blank = False)
     encrypted_data = models.CharField(max_length=300, blank=False)
+    
+    class Meta(object):
+        unique_together = ('email',)
 
     @property
     def image_id(self):
@@ -34,6 +37,15 @@ class MyUser(AbstractUser):
                print(e)
             return decrypt_file.name
 
+class RegistrationRequest(models.Model): 
+    user_pk = models.CharField(max_length=30, blank=False)
+    user_registration_uuid = models.TextField(max_length=40, blank=False)
+    date = models.DateTimeField(auto_now_add=True, blank=False)
+
+class ChangePasswordRequest(models.Model): 
+    user_pk = models.CharField(max_length=30, blank=False)
+    user_token = models.TextField(max_length=80, blank=False)
+    date = models.DateTimeField(auto_now_add=True, blank=False)
 
 def kamikadze(filename):
     time.sleep(5)

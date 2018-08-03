@@ -21,7 +21,7 @@ urlpatterns = [
     # Examples:
     url(r'^$', app.views.home, name='home'),
     url(r'^contact$', app.views.contact, name='contact'),
-    url(r'^about', app.views.about, name='about'),
+    url(r'^test', app.views.test, name='test'),
     url(r'^cabinet', app.views.cabinet, name='cabinet'),
     url(r'^registration', app.views.registration, name='registration'),
     url(r'^login/$',
@@ -50,6 +50,11 @@ urlpatterns = [
     url(r'^admin/', include(admin.site.urls)),
     url(r'^register/$', app.views.register, name='register'),
     url(r'^edit/$', app.views.edit, name='edit'),
+    url(r'^activate/[0-9,a-z,-]{36}$', app.views.activate, name='activate'),
+    url(r'^changepass/[0-9,a-z,-]{72}$', app.views.change_password, name='change_password'),#redirect from email
+    url(r'^passchange_req/$', app.views.passchange_req, name='passchange_req'),#creating request in db and send email
+    url(r'^passchange/$', app.views.passchange, name='passchange'),#request to change pass for ajax in redirected email link
+    url(r'^emailusernamecheck/$', app.views.emailusernamecheck, name='emailusernamecheck'),#request to change pass for ajax in redirected email link
 ]
 
 urlpatterns += static(settings.STATIC_URL, document_root=settings.STATIC_ROOT)

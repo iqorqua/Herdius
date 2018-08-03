@@ -14177,3 +14177,30 @@ SystemError: initialization of _strxor failed without raising an exception
 2018-07-31T08:38:15: Start analysis
 2018-07-31T08:38:15: IncludeModulesFromModulePath = win32com
 2018-07-31T08:38:17: Deleting 0 files
+
+2018-08-01T11:02:14: Start analysis
+2018-08-01T11:02:15: IncludeModulesFromModulePath = win32com
+2018-08-01T11:02:16: Including c:\users\igorqua\source\repos\herdius\herdius\env\lib\site-packages\gmail because gmail.cli needs updating
+2018-08-01T11:02:16: Deleting 0 files
+2018-08-01T11:02:16: astropy.CallDepth = 0
+2018-08-01T11:02:16: delphixpy.CallDepth = 0
+2018-08-01T11:02:16: matplotlib.CallDepth = 3
+2018-08-01T11:02:16: pandas.CallDepth = 0
+2018-08-01T11:02:16: sympy.CallDepth = 0
+2018-08-01T11:02:16: Start group "c:\users\igorqua\source\repos\herdius\herdius\env\lib\site-packages\gmail" with 6 files
+2018-08-01T11:02:17: Parsing complete
+2018-08-01T11:02:17: Analyzing "gmail.cli" ("c:\users\igorqua\source\repos\herdius\herdius\env\lib\site-packages\gmail\cli.py")
+2018-08-01T11:02:17: Analyzing "gmail.gmail" ("c:\users\igorqua\source\repos\herdius\herdius\env\lib\site-packages\gmail\gmail.py")
+2018-08-01T11:02:17: Analyzing "gmail.message" ("c:\users\igorqua\source\repos\herdius\herdius\env\lib\site-packages\gmail\message.py")
+2018-08-01T11:02:17: Analyzing "gmail.test_gmail" ("c:\users\igorqua\source\repos\herdius\herdius\env\lib\site-packages\gmail\test_gmail.py")
+2018-08-01T11:02:17: Analyzing "gmail.test_message" ("c:\users\igorqua\source\repos\herdius\herdius\env\lib\site-packages\gmail\test_message.py")
+2018-08-01T11:02:17: Analyzing "gmail" ("c:\users\igorqua\source\repos\herdius\herdius\env\lib\site-packages\gmail\__init__.py")
+2018-08-01T11:02:17: Starting analysis of 6 modules
+2018-08-01T11:02:17: Analysis complete
+2018-08-01T11:02:17: Saving group "c:\users\igorqua\source\repos\herdius\herdius\env\lib\site-packages\gmail"
+2018-08-01T11:02:17: End of group "c:\users\igorqua\source\repos\herdius\herdius\env\lib\site-packages\gmail"
+2018-08-01T11:02:19: Deleting 0 files
+
+2018-08-01T18:52:14: Start analysis
+2018-08-01T18:52:14: IncludeModulesFromModulePath = win32com
+2018-08-01T18:52:15: Deleting 0 files

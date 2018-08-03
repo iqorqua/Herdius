@@ -1,8 +1,12 @@
-$(".btn-next1").click(function () {
-    s.valid();
-    if (s.element("#username") & s.element("#first_name") & s.element("#last_name") & s.element("#bday")) {
-        next($(this));
-    };
+$(".btn-next1").click(function (event) {
+    if (user_exists) {
+        return 1;
+    }
+        s.valid();
+        if ((!user_exists) && s.element("#username") && s.element("#first_name") && s.element("#last_name") && s.element("#bday")) {
+            next($(this));
+        };
+
 });
 $(".btn-next2").click(function () {
     s.valid();
@@ -16,6 +20,7 @@ function csrfSafeMethod(method) {
     return (/^(GET|HEAD|OPTIONS|TRACE)$/.test(method));
 }
 function next(button) {
+    if (user_exists) { return 0 };
     var parent_fieldset = button.parents('fieldset');
     var next_step = true;
 
@@ -30,6 +35,9 @@ function next(button) {
     });
 
     if (next_step) {
+        if (user_exists) {
+            return 1;
+        }
         parent_fieldset.fadeOut(400, function () {
             $(this).next().fadeIn();
         });
@@ -79,7 +87,9 @@ jQuery(document).ready(function() {
                 $(this).removeClass('input-error');
             }
         });
-
+        if (user_exists) {
+            return 1;
+        }
         if (next_step) {
             parent_fieldset.fadeOut(400, function () {
                 $(this).next().fadeIn();

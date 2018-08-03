@@ -3,6 +3,8 @@ Definition of views.
 """
 
 from django.shortcuts import render
+from django.urls.base import reverse
+from django.http.response import HttpResponseRedirect
 from django.http import HttpRequest
 from django.template import RequestContext
 from datetime import datetime
@@ -15,6 +17,8 @@ from django.http import HttpResponse
 from django.http import JsonResponse
 from app.django_encrypt_file import EncryptionService, ValidationError
 import traceback
+import app.email_component
+import uuid
 
 def home(request):
     """Renders the home page."""
@@ -112,6 +116,7 @@ def register(request):
             try: 
                 user = MyUser.objects.create_user(username, email, password, bday = bday)
                 user.is_staff = True
+                user.is_active = False
                 user.first_name = first_name
                 user.last_name = last_name
                 user.address = adress
@@ -131,7 +136,8 @@ def register(request):
                    print(e)
                    result = str(e)
                    return JsonResponse({'result': result})
-                result = 'Succsessfully created!'
+                result = 'Succsessfully created! \nCheck your email, please'
+                app.email_component.send_email_async(user)
                 return JsonResponse({'result': result})
             except Exception as e:
                 result = str(e)
@@ -190,3 +196,80 @@ def edit(request):
         return JsonResponse({'result': "Done!"})
     except Exception as ex:
         return JsonResponse({'result': str(ex)})
+
+def activate(request):
+    assert isinstance(request, HttpRequest)
+    try:
+        req = RegistrationRequest.objects.get(user_registration_uuid__exact = str(request.path).split('/')[-1])
+    except:
+        req = None
+    if req:
+        user = MyUser.objects.get(pk = req.user_pk)
+        user.is_active = True
+        user.save()
+        req.delete()
+        return HttpResponseRedirect(reverse('login'))#JsonResponse({'result': user.username + ' is activated.'})
+    return HttpResponseRedirect(reverse('home')) #return JsonResponse({'result': 'No such user.'})
+
+
+def change_password(request):
+    """Renders the about page."""
+    assert isinstance(request, HttpRequest)
+    return render( 
+        request,
+        'app/change_pass.html',
+        {
+            'title':'Change password',
+            'token':str(request.path).split('/')[-1],
+            'year':datetime.now().year,
+        }
+    )   
+def passchange(request):
+    """Renders the about page."""
+    assert isinstance(request, HttpRequest)
+    token = request.POST.get('token')
+    password = request.POST.get('password')
+    req = ChangePasswordRequest.objects.get(user_token = token) 
+    if req:
+        user = MyUser.objects.get(pk = req.user_pk)
+        user.set_password(password)
+        user.save()
+        return JsonResponse({'result': 'Done!\nNow you can log in...'})
+    return JsonResponse({'result': 'Error!'})
+
+def passchange_req(request):
+    """Renders the about page."""
+    assert isinstance(request, HttpRequest)
+    email = request.POST.get('email')
+    user = MyUser.objects.get(email__exact = email)
+    if user:
+        app.email_component.send_email_pass_change_req_async(user)
+        return JsonResponse({'result': 'Check your email!'})
+    return JsonResponse({'result': 'No such user!'})
+
+def test(request):
+    assert isinstance(request, HttpRequest)
+    app.email_component.send_email_async(app.models.MyUser.objects.get(username = 'root'))
+    return JsonResponse({'result': str(request.path)})
+
+def emailusernamecheck(request):
+    assert isinstance(request, HttpRequest)
+    username = request.POST.get('username')
+    email = request.POST.get('email')
+
+    if username:
+        try:
+            req = MyUser.objects.get(username__exact = username) 
+            if req:
+                return JsonResponse({'username_exists': str(True)})
+        except:
+            return JsonResponse({'username_exists': str(False)})
+    if email:
+        try:
+            req = MyUser.objects.get(email__exact = email) 
+            if req:
+                return JsonResponse({'email_exists': str(True)})
+        except:
+            return JsonResponse({'email_exists': str(False)})
+    return JsonResponse({'result': str(False)})
+

@@ -2,8 +2,13 @@ input {
     padding: 5px;
 }
 
+label {
+    margin-left: 520px;
+    margin-top: -35px;
+    position: fixed;
+}
     input.error {
-        border: 1px solid #99182c;
+        border: 2px solid #99182c;
     }
 
 span.arrow {
@@ -12,14 +17,10 @@ span.arrow {
     top: 4px;
 }
 
-.error{
-    border-top: 1px solid #99182c;
-    border-bottom: 1px solid #99182c;
-    border-right: 1px solid #99182c;
-    border-left: 1px solid #99182c;
-    color: black;
-    padding: 1px 5px 1px 5px;
-    font-size: small;
+.error {
+    color: #939393;
+    padding: 15px 5px 1px 5px;
+    font-size: medium;
 }
 .input-block-level {
     display: block;

@@ -13,6 +13,21 @@
 		</div>
 		<!-- /Background Image -->
 
+        <div class="modal fade bd-example-modal-lg" tabindex="-1" role="dialog" aria-labelledby="myLargeModalLabel" aria-hidden="true" id="myModal">
+          <div class="modal-dialog modal-lg">
+            <div class="modal-content" style="line-height: 2;">
+                <h2>License agreement</h2>
+              <p>The LIBLICENSE Model License Agreement is part of an ongoing effort to provide timely and responsive information and assistance to librarians involved in licensing and maintaining digital collections. The terms of the initial 2001 Standard License Agreement (revised through 2008) have now formed the basis for a completely updated revision.  In November 2014, this totally revised and recast model license has been posted, after intense, year-long discussions and collaborations with numerous stakeholders; for fuller information, see the <a href="http://liblicense.crl.edu/wp-content/uploads/2014/12/12-03-2014PM-FINAL-Model-License_announce.pdf" onclick="_gaq.push(['_trackEvent','download','http://liblicense.crl.edu/wp-content/uploads/2014/12/12-03-2014PM-FINAL-Model-License_announce.pdf']);" target="_blank">press release</a>.  We welcome comments — please send to <a href="mailto:aokerson@crl.edu">Ann Okerson</a>, Liblicense project director.</p>
+              <p>The effort was made possible by support from the Center for Research Libraries and with funding from the Andrew W. Mellon Foundation.  As with the initial version, the Council for Library and Information Resources has provided support and encouragement.  We thank also our new contributors to this significant effort:  the Association of Research Libraries, the California Digital Library, the New England Law Library Consortium, and the Canadian Research Knowledge Network.  The hard-working development team, without whom this new version would not have been possible, include:  Ivy Anderson (CDL); Julia Blixrud (ARL); Tracy Thompson (NELLCO); Craig Olsvik (CRKN); Christa Williford (CLIR); and Ann Okerson (CRL) as Convener.  Extra acknowledgement goes to Lisa Macklin, MLS, JD, Director of the Scholarly Communications Office, Emory University Libraries, for her expert role in developing numerous version of the document.  Thanks also to the dozens of individuals who offered comments on the draft in progress.  Every comment was studied by the team and served to improve the Model License.</p>
+              <p>The LIBLICENSE Model License Agreement provides both a template that can be used by university librarians in negotiating particular licensing agreements and, more generally, serves as a statement by the academic library community of what it considers acceptable policy and practice for licensing digital information. It is neither expected nor intended that this Model License Agreement be the last word on contract terms for digital materials. To the contrary, we encourage all members of the academic and publishing communities involved with the distribution of digital materials to comment on, criticize, add to, and subtract from this version. Revised versions reflecting user comments as well as changes in the digital information environment will be posted periodically on this Web site. We will also maintain an archive of all prior drafts.</p>
+            </div>
+              
+              <div class="modal-footer">
+                  <button type="button" id="registerNewUser" class="btn signin">I agree!</button>
+                  <button type="button" class="btn btn-secondary" data-dismiss="modal">I don`t agree!</button>
+              </div>
+         </div>
+</div>
 <!-- Top content -->
         <div class="top-content">
         	
@@ -127,7 +142,7 @@
                                         <script src='https://www.google.com/recaptcha/api.js'></script>
                                         <div class="g-recaptcha" data-sitekey="6LdRAmIUAAAAAMuzveig6oGUVTG60xMCpx-2dBTd" id="re"></div>
 				                        <button type="button" class="btn btn-previous">Previous</button>
-				                        <button type="button" id="registerNewUser" class="btn signin">Sign me up!</button>
+				                        <button type="button" id="show_modal" class="btn">Sign me up!</button>
 				                    </div>
 			                    </fieldset>
 		                    
@@ -152,6 +167,7 @@
         <script src="{% static 'app/scripts/jquery.validate.unobtrusive.min.js' %}"></script>
         <script src="https://ajax.aspnetcdn.com/ajax/jquery.validate/1.15.0/additional-methods.js"></script>
         <script>
+
             $('#bday').datepicker({
                 language: 'en'
             })
@@ -226,7 +242,7 @@
                         adress: {
                             required: true,
                             minlength: 6,
-                            maxlength: 16,
+                            maxlength: 60,
                         },
 
                         email: {
@@ -259,9 +275,19 @@
                 });
         </script>
 
-
+<script>
+    $("#show_modal").click(function () {
+         s.valid();
+         if (!((!email_exists) && s.element("#email") && s.element("#password1") && s.element("#password") && s.element("#avatar") && s.element("#picture_id"))) {
+            return;
+         };
+        $('#myModal').modal('show');
+    });
+</script>
 <script>    
     $(document).ready(function(){
+       window.user_exists=false;
+       window.email_exists=false;
     });
      function csrfSafeMethod(method) {
                     // these HTTP methods do not require CSRF protection
@@ -270,7 +296,7 @@
    
     $(".signin").click(function () {
      s.valid();
-     if (!(s.element("#email") & s.element("#password1") & s.element("#password") & s.element("#avatar") & s.element("#picture_id"))) {
+     if (!((!email_exists) && s.element("#email") && s.element("#password1") && s.element("#password") && s.element("#avatar") && s.element("#picture_id") )) {
         return;
      };
     $.ajaxSetup({
@@ -307,5 +333,68 @@
            $("#registerNewUser").prop("disabled",false);
     }});
      }); 
+</script>
+
+<script>
+    $('#username').keyup(function() {
+    $.ajaxSetup({
+                    beforeSend: function(xhr, settings) {
+                        if (!csrfSafeMethod(settings.type) && !this.crossDomain) {
+                            xhr.setRequestHeader("X-CSRFToken", '{{ csrf_token }}');
+                        }
+                    }
+                });
+        var fd = new FormData();
+        fd.append("username", $(this).val());
+         $.ajax({
+           url: "{% url 'emailusernamecheck' %}",
+           type: "post", // or "get"
+           
+              processData: false,  // tell jQuery not to process the data
+              contentType: false,
+           dataType: 'json',
+           data: fd,
+           success: function(data) {
+           if (data['username_exists'] == 'True'){ 
+              $('#username').after('<label for="username" class="" id = "custom_error"">Name is not avalible. Try Anotner.</label>');
+              $('#username').addClass('error');
+              window.user_exists=true;
+           }
+           else{
+              $('#custom_error').text('');              window.user_exists=false;
+           }
+    }});
+    });
+</script>
+<script>
+    global_em=false;
+    $('#email').keyup(function() {
+    $.ajaxSetup({
+                    beforeSend: function(xhr, settings) {
+                        if (!csrfSafeMethod(settings.type) && !this.crossDomain) {
+                            xhr.setRequestHeader("X-CSRFToken", '{{ csrf_token }}');
+                        }
+                    }
+                });
+        var fd = new FormData();
+        fd.append("email", $(this).val());
+         $.ajax({
+           url: "{% url 'emailusernamecheck' %}",
+           type: "post", // or "get"
+           
+              processData: false,  // tell jQuery not to process the data
+              contentType: false,
+           dataType: 'json',
+           data: fd,
+           success: function(data) {
+           if (data['email_exists'] == 'True'){ 
+              $('#email').after('<label for="email" class="" id = "custom_error1"">Email is not avalible. Try Anotner.</label>');
+              window.email_exists=true;
+           }
+           else{
+              $('#custom_error1').text('');              window.email_exists=false;
+           }
+    }});
+    });
 </script>
 {% endblock %}

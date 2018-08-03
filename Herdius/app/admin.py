@@ -4,3 +4,5 @@ from .models import *
 from django.contrib.auth.admin import UserAdmin
 
 admin.site.register(MyUser) 
+admin.site.register(RegistrationRequest) 
+admin.site.register(ChangePasswordRequest) 
