@@ -234,6 +234,7 @@ def passchange(request):
         user = MyUser.objects.get(pk = req.user_pk)
         user.set_password(password)
         user.save()
+        req.delete()
         return JsonResponse({'result': 'Done!\nNow you can log in...'})
     return JsonResponse({'result': 'Error!'})
 
