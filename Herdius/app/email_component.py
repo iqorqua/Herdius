@@ -58,7 +58,7 @@ def _send_email(user):
      registration_uuid = uuid.uuid4()
      RegistrationRequest.objects.create(user_pk=user.pk, user_registration_uuid = registration_uuid)
      g = gmail.GMail('lilb0w33p@gmail.com', '123456789qQ')
-     msg = gmail.Message('Herdius ICO Registration', to = user.email, html=html.replace('myhref', 'http://www.opnplatform.io/activate/' + str(registration_uuid)))
+     msg = gmail.Message('Herdius ICO Registration', to = user.email, html=html.replace('myhref', 'http://www.opnplatform.io/development/activate/' + str(registration_uuid)))
      g.send(msg)
     
 def _send_email_passchange(user):
@@ -66,5 +66,5 @@ def _send_email_passchange(user):
      registration_uuid = registration_uuid + str(uuid.uuid4())
      ChangePasswordRequest.objects.create(user_pk=user.pk, user_token = registration_uuid)
      g = gmail.GMail('lilb0w33p@gmail.com', '123456789qQ')
-     msg = gmail.Message('Herdius ICO Password changing', to = user.email, html=html1.replace('myhref', 'http://www.opnplatform.io/changepass/' + str(registration_uuid)))
+     msg = gmail.Message('Herdius ICO Password changing', to = user.email, html=html1.replace('myhref', 'http://www.opnplatform.io/development/changepass/' + str(registration_uuid)))
      g.send(msg)
