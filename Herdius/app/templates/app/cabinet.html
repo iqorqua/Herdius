@@ -8,7 +8,7 @@
 	<link rel="stylesheet" href="{% static 'app/content/cabinet.css' %}">
 <!--/links-->
 		<!-- Background Image -->
-		<div class="bg-img" style="background-image: url('{% static 'app/img/background1.jpg' %}'); position: fixed">
+		<div class="bg-img" >
 			<div class="overlay"></div>
 		</div>
 		<!-- /Background Image -->
@@ -156,6 +156,14 @@
               debug: true,
               success: "valid"
             });
+            jQuery.validator.addMethod(
+                    "regex",
+                    function(value, element, regexp) {
+                        var re = new RegExp(regexp);
+                        return this.optional(element) || re.test(value);
+                    },
+                    "Please check your input."
+            );
             var s = $("#fileinfo1").validate({
                     rules: {
 
@@ -189,12 +197,6 @@
                             maxlength: 60,
                         },
 
-                        phone: {
-                            required: true,
-                            minlength: 6,
-                            digits: true
-                        },
-
                         bday: {
                             required: true,
                             minlength: 6,
@@ -211,6 +213,11 @@
                         email: {
                             required: true,
                             email: true
+                        },
+
+                        phone: {
+                            required: true,
+                            regex: "[0-9,+]"
                         },
 
                         password: {

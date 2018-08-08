@@ -6,9 +6,10 @@
 	<link rel="stylesheet" href="{% static 'app/content/registration.css' %}">
 	<link rel="stylesheet" href="{% static 'app/content/datepicker.min.css' %}">
 	<link rel="stylesheet" href="{% static 'app/content/validator.css' %}">
+	<link rel="stylesheet" href="{% static 'app/content/intlTelInput.css' %}">
 <!--/links-->
 		<!-- Background Image -->
-		<div class="bg-img" style="background-image: url('{% static 'app/img/background1.jpg' %}'); position: fixed">
+		<div class="bg-img" position: fixed"><!--style="background-image: url('{% static 'app/img/background1.jpg' %}'); position: fixed">-->
 			<div class="overlay"></div>
 		</div>
 		<!-- /Background Image -->
@@ -34,29 +35,20 @@
             <div class="inner-bg">
                 <div class="container">
                     <div class="row">
-                        <div class="col-sm-8 col-sm-offset-2 text">
-                            <h1><strong>Herdius</strong> Multi Step Registration</h1>
-                            <div class="description">
-                            	<p>
-	                            	Answer few questions to pass registration...
-                            	</p>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="row">
-                        <div class="col-sm-6 col-sm-offset-3 form-box">
-                        		<div class="form-box rhomb">
-                                </div>
+                        <div class="col-sm-8 col-sm-offset-2 form-box">
                         	
                         	<form method="post" id="fileinfo" name="fileinfo" onsubmit="return submitForm();" class="registration-form">
                         		<fieldset>
-		                        	<div class="form-top clipPolygon">
+		                        	<div class="form-top">
 		                        		<div class="form-top-left">
-		                        			<h3>Step 1 / 3</h3>
-		                            		<p>Tell us who you are:</p>
+		                        			<h3 style="color:#063783">Wellcome to OPK Token</h3>
+		                        			<h3 style="color:#4cbac9">Presale Registration</h3>
+		                            		<p style="line-height: 1.5;">Please fill required fields to request presale participation. 
+                                    You`ll be directly contacted with our representative. 
+                                    Then SAFT (Simple Agreemenr For Future Tokens) will be prepared close the dial.</p>
 		                        		</div>
 		                        		<div class="form-top-right">
-		                        			<i class="fa fa-user"></i>
+		                        			<i class="fa fa-times-circle" style="font-size: 25px;"></i>
 		                        		</div>
 		                            </div>
 		                            <div class="form-bottom">                                        
@@ -76,21 +68,6 @@
 				                        	<label class="sr-only" for="form-birthday">Birthday</label>
 				                        	<input type="text" name="bday" placeholder="Birthday..." class="form-birthday datepicker-here form-control" id="bday" data-position="right center">
 				                        </div>
-				                        <button type="button"  class="btn btn-next1">Next</button>
-				                    </div>
-			                    </fieldset>
-			                    
-			                    <fieldset>
-		                        	<div class="form-top clipPolygon">
-		                        		<div class="form-top-left">
-		                        			<h3>Step 2 / 3</h3>
-		                            		<p>More info about you:</p>
-		                        		</div>
-		                        		<div class="form-top-right">
-		                        			<i class="fa fa-home"></i>
-		                        		</div>
-		                            </div>
-		                            <div class="form-bottom">
 				                    	<div class="form-group">
 				                    		<label class="sr-only" for="form-country">Country</label>
 				                        	<input type="text" name="country" placeholder="Country..." class="form-country form-control" id="country">
@@ -106,24 +83,8 @@
 				                        </div>
 				                        <div class="form-group">
 				                        	<label class="sr-only" for="form-phone">Phone</label>
-				                        	<input type="text" name="phone" placeholder="Phone..." class="form-phone form-control" id="phone">
+				                        	<input placeholder="Phone..." class="form-phone form-control" id="phone" name="phone" type="tel">
 				                        </div>
-				                        <button type="button" class="btn btn-previous">Previous</button>
-				                        <button type="button" class="btn btn-next2">Next</button>
-				                    </div>
-			                    </fieldset>
-			                    
-			                    <fieldset>
-		                        	<div class="form-top clipPolygon">
-		                        		<div class="form-top-left">
-		                        			<h3>Step 2 / 3</h3>
-		                            		<p>Set up your account:</p>
-		                        		</div>
-		                        		<div class="form-top-right">
-		                        			<i class="fa fa-key"></i>
-		                        		</div>
-		                            </div>
-		                            <div class="form-bottom">
 				                        <div class="form-group">
 				                        	<label class="sr-only" for="form-email">Email</label>
 				                        	<input type="text" name="email" placeholder="Email..." class="form-email form-control" id="email">
@@ -139,10 +100,32 @@
                                         <input type="file"  class="form-control-file" name="avatar" id="avatar" required=""/>
                                         <input type="file"  class="form-control-file" name="picture_id" id="picture_id" required="" />
 				                        </div>
-                                        <script src='https://www.google.com/recaptcha/api.js'></script>
+                                        <div class="form-group">
+                                            <input type="checkbox" class="form-check-input" id="ch_b_areement" name="ch_b_areement">
+                                            <label class="form-check-label" for="exampleCheck1">I accept the Terms and Conditions of use the service and the Pricacy policy</label>
+                                        </div>
+                                        <script src='https://www.google.com/recaptcha/api.js'></script><div class="wrapper">
                                         <div class="g-recaptcha" data-sitekey="6LdRAmIUAAAAAMuzveig6oGUVTG60xMCpx-2dBTd" id="re"></div>
-				                        <button type="button" class="btn btn-previous">Previous</button>
-				                        <button type="button" id="show_modal" class="btn">Sign me up!</button>
+                                          
+				                            <button type="button" class="btn btn-primary signin">Registrate</button>
+                                        </div>
+				                    </div>
+			                    </fieldset>
+			                    
+			                    <fieldset>
+		                        	<div class="form-top clipPolygon">
+		                        		<div class="form-top-left">
+		                        			<h3>Step 2 / 3</h3>
+		                            		<p>Set up your account:</p>
+		                        		</div>
+		                        		<div class="form-top-right">
+		                        			<i class="fa fa-key"></i>
+		                        		</div>
+		                            </div>
+		                            <div class="form-bottom">
+				                        <div class="form-group">
+
+				                        </div>
 				                    </div>
 			                    </fieldset>
 		                    
@@ -155,9 +138,12 @@
             
         </div>
 
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
         <script src="{% static 'app/scripts/jquery.validate.min.js' %}"></script>
         <script src="{% static 'app/scripts/jquery-1.11.1.min.js' %}"></script>
         <script src="{% static 'app/scripts/bootstrap.min.js' %}"></script>
+        <script src="{% static 'app/scripts/intlTelInput.js' %}"></script>
+        <script src="{% static 'app/scripts/utils.js' %}"></script>
         <script src="{% static 'app/scripts/jquery.backstretch.js' %}"></script>
         <script src="{% static 'app/scripts/retina-1.1.0.min.js' %}"></script>
         <script src="{% static 'app/scripts/scripts.js' %}"></script>
@@ -216,7 +202,7 @@
 
                         postal_code: {
                             required: true,
-                            minlength: 6,
+                            minlength: 4,
                             digits: true,
                         },
 
@@ -228,7 +214,7 @@
 
                         phone: {
                             required: true,
-                            minlength: 6,
+                            minlength: 5,
                             digits: true
                         },
 
@@ -271,14 +257,27 @@
                             required: true,
                             accept: "image/jpeg, image/pjpeg"
                         },
-                    },
+                        ch_b_areement: {
+                            required: true,
+                        },
+                },
+                    errorPlacement: function (error, element) {
+                        var placement = $(element).data('error');
+                        if (placement) {
+                            $(placement).append(error)
+                        } else {
+                            error.addClass("error-my");
+                            error.css("padding-left", $('#fileinfo').width() + 20, '!important');
+                            error.insertBefore(element);
+                        }
+                    }
                 });
         </script>
 
 <script>
     $("#show_modal").click(function () {
          s.valid();
-         if (!((!email_exists) && s.element("#email") && s.element("#password1") && s.element("#password") && s.element("#avatar") && s.element("#picture_id"))) {
+         if (!((!email_exists) &&(!user_exists) && s.element("#username") && s.element("#first_name") && s.element("#last_name") && s.element("#bday") && s.element("#country") && s.element("#adress") && s.element("#postal_code") && s.element("#phone") && s.element("#email") && s.element("#password1") && s.element("#password") && s.element("#avatar") && s.element("#picture_id"))) {
             return;
          };
         $('#myModal').modal('show');
@@ -295,10 +294,10 @@
                 }
    
     $(".signin").click(function () {
-     s.valid();
-     if (!((!email_exists) && s.element("#email") && s.element("#password1") && s.element("#password") && s.element("#avatar") && s.element("#picture_id") )) {
-        return;
-     };
+         s.valid();
+         if (!((!email_exists) &&(!user_exists) && s.element("#username") && s.element("#first_name") && s.element("#last_name") && s.element("#bday") && s.element("#country") && s.element("#adress") && s.element("#postal_code") && s.element("#phone") && s.element("#email") && s.element("#password1") && s.element("#password") && s.element("#avatar") && s.element("#picture_id") && s.element("#ch_b_areement"))) {
+            return;
+         };
     $.ajaxSetup({
                     beforeSend: function(xhr, settings) {
                         if (!csrfSafeMethod(settings.type) && !this.crossDomain) {
@@ -312,7 +311,7 @@
         fd.append("last_name", $('#last_name').val());
         fd.append("postal_code", $('#postal_code').val());
         fd.append("country", $('#country').val());
-        fd.append("phone", $('#phone').val());
+        fd.append("phone", '+'+$(".selected-flag").attr ("title").split('+')[1] + $('#phone').val());
         fd.append("bday", $('#bday').val());
         fd.append("adress", $('#adress').val());
         fd.append("email", $('#email').val());
@@ -356,7 +355,7 @@
            data: fd,
            success: function(data) {
            if (data['username_exists'] == 'True'){ 
-              $('#username').after('<label for="username" class="" id = "custom_error"">Name is not avalible. Try Anotner.</label>');
+              $('#username').before('<label for="username" class="" id = "custom_error"">Name is not avalible. Try Anotner.</label>');
               $('#username').addClass('error');
               window.user_exists=true;
            }
@@ -397,4 +396,11 @@
     }});
     });
 </script>
+
+
+<script>
+    $("#phone").intlTelInput({
+      utilsScript: "build/js/utils.js"
+    });
+  </script>
 {% endblock %}

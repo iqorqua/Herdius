@@ -70,7 +70,10 @@
     <Content Include="app\static\app\content\bootstrap.min.css" />
     <Content Include="app\static\app\content\cabinet.css" />
     <Content Include="app\static\app\content\datepicker.min.css" />
+    <Content Include="app\static\app\content\demo.css" />
     <Content Include="app\static\app\content\font-awesome.min.css" />
+    <Content Include="app\static\app\content\intlTelInput.css" />
+    <Content Include="app\static\app\content\intlTelInput.min.css" />
     <Content Include="app\static\app\content\jquery.datepicker.css" />
     <Content Include="app\static\app\content\magnific-popup.css" />
     <Content Include="app\static\app\content\owl.carousel.css" />
@@ -96,6 +99,9 @@
     <Content Include="app\static\app\img\blog3.jpg" />
     <Content Include="app\static\app\img\card.svg" />
     <Content Include="app\static\app\img\Cards.png" />
+    <Content Include="app\static\app\content\del.png" />
+    <Content Include="app\static\app\img\flags%402x.png" />
+    <Content Include="app\static\app\img\flags.png" />
     <Content Include="app\static\app\img\logo-alt.png" />
     <Content Include="app\static\app\img\logo.png" />
     <Content Include="app\static\app\img\perso1.jpg" />
@@ -115,7 +121,10 @@
     <Content Include="app\static\app\scripts\additional-methods.js" />
     <Content Include="app\static\app\scripts\additional-methods.min.js" />
     <Content Include="app\static\app\scripts\bootstrap-datepicker.min.js" />
+    <Content Include="app\static\app\scripts\data.js" />
     <Content Include="app\static\app\scripts\datepicker.min.js" />
+    <Content Include="app\static\app\scripts\intlTelInput.js" />
+    <Content Include="app\static\app\scripts\intlTelInput.min.js" />
     <Content Include="app\static\app\scripts\jquery-3.3.1.min.js" />
     <Content Include="app\static\app\scripts\jquery.backstretch.min.js" />
     <Content Include="app\static\app\scripts\jquery.datepicker.min.js" />
@@ -131,6 +140,7 @@
     <Content Include="app\static\app\scripts\retina-1.1.0.min.js" />
     <Content Include="app\static\app\scripts\scripts.js" />
     <Content Include="app\static\app\scripts\scrollspy.js" />
+    <Content Include="app\static\app\scripts\utils.js" />
     <Content Include="app\static\app\scripts\validate.js" />
     <Content Include="app\templates\app\cabinet.html" />
     <Content Include="app\templates\app\footer.html" />

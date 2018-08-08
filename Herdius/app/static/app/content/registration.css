@@ -31,10 +31,11 @@ h1, h2 {
 }
 
 h3 {
-    font-size: 22px;
-    font-weight: 300;
-    color: #555;
-    line-height: 30px;
+    text-align: center;
+}
+
+p {
+    text-align: center;
 }
 
 img {
@@ -147,7 +148,7 @@ img {
 .form-top {
     overflow: hidden;
     padding: 0 25px 15px 25px;
-    background: #1c1d21e0;
+    background: white;
     -moz-border-radius: 4px 4px 0 0;
     -webkit-border-radius: 4px 4px 0 0;
     border-radius: 4px 4px 0 0;
@@ -178,10 +179,22 @@ img {
     -webkit-clip-path: polygon(50% 0%, 100% 50%, 50% 100%, 51% 47%);
     clip-path: polygon(50% 0%, 100% 50%, 50% 100%, 51% 47%);
 }
+.form-check-label{
+    position:inherit;
+    margin:0;
+}
+.wrapper {
+    text-align: center;
+}
+
+.button {
+    position: absolute;
+    top: 50%;
+}
 
 .form-top-left {
     float: left;
-    width: 75%;
+    width: 100%;
     padding-top: 25px;
 }
 
@@ -190,13 +203,14 @@ img {
     }
 
 .form-top-right {
-    float: left;
-    width: 25%;
+    float: right;
+    width: 92%;
     padding-top: 5px;
     font-size: 66px;
     color: #ddd;
     line-height: 100px;
     text-align: right;
+    position:absolute;
 }
 
 .form-bottom {
@@ -206,7 +220,7 @@ img {
     -webkit-border-radius: 0 0 4px 4px;
     border-radius: 0 0 4px 4px;
     text-align: left;
-    background: #383838c4;
+    background: white;
 }
 
 form .form-bottom textarea {

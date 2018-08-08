@@ -28,6 +28,9 @@ DEBUG = True
 
 ALLOWED_HOSTS = ['*']
 
+LOGIN_REDIRECT_URL = '/development/'
+
+LOGOUT_REDIRECT_URL = '/development/'
 
 # Application definition
 

@@ -138,9 +138,7 @@ ul, ol {
 /* --  background section  -- */
 
 .bg-grey {
-    background-color: #FAFAFA;
-    border-top: 1px solid #EEE;
-    border-bottom: 1px solid #EEE;
+    background-color: #083683;
 }
 
 .bg-dark {
@@ -151,7 +149,7 @@ ul, ol {
 /* --  background image section  -- */
 
 .bg-img {
-    position: absolute;
+    position: fixed;
     left: 0;
     top: 0;
     right: 0;
@@ -160,8 +158,9 @@ ul, ol {
     background-position: center;
     background-size: cover;
     background-attachment: fixed;
+    background-color: #083683;
 }
-
+/*
 .bg-img .overlay {
     position: absolute;
     left: 0;
@@ -170,7 +169,7 @@ ul, ol {
     bottom: 0;
     opacity: .8;
     background: #1C1D21;
-}
+}*/
 
 
 /* --  section header  -- */
@@ -200,7 +199,7 @@ ul, ol {
 /* --  Input  -- */
 
 input[type="text"], input[type="email"], input[type="password"], input[type="number"], input[type="date"], input[type="url"], input[type="tel"], textarea {
-    height: 40px;
+    /*height: 40px;
     width: 100%;
     border: none;
 	  background: #F4F4F4;
@@ -209,7 +208,7 @@ input[type="text"], input[type="email"], input[type="password"], input[type="num
     padding: 0px 10px;
     opacity: 0.5;
     -webkit-transition: 0.2s border-color, 0.2s opacity;
-    transition: 0.2s border-color, 0.2s opacity;
+    transition: 0.2s border-color, 0.2s opacity;*/
 }
 
 textarea {

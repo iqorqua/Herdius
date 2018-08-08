@@ -33,7 +33,8 @@ urlpatterns = [
             'extra_context':
             {
                 'title': 'Log in',
-                'year': datetime.now().year
+                'year': datetime.now().year,
+                'next': getattr(settings, "LOGIN_REDIRECT_URL", None),
             } 
         },
         name='login'),
