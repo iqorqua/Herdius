@@ -20,6 +20,18 @@ import traceback
 import app.email_component
 import uuid
 
+def coming_soon(request):
+    """Renders the home page."""
+    assert isinstance(request, HttpRequest)
+    return render(
+        request,
+        'app/comingSoon.html',
+        {
+            'title':'Coming Soon',
+            'year':datetime.now().year,
+        }
+    )
+
 def home(request):
     """Renders the home page."""
     assert isinstance(request, HttpRequest)
@@ -211,7 +223,6 @@ def activate(request):
         return HttpResponseRedirect(reverse('login'))#JsonResponse({'result': user.username + ' is activated.'})
     return HttpResponseRedirect(reverse('home')) #return JsonResponse({'result': 'No such user.'})
 
-
 def change_password(request):
     """Renders the about page."""
     assert isinstance(request, HttpRequest)
@@ -224,6 +235,7 @@ def change_password(request):
             'year':datetime.now().year,
         }
     )   
+
 def passchange(request):
     """Renders the about page."""
     assert isinstance(request, HttpRequest)

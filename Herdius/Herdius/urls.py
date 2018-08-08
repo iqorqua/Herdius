@@ -19,12 +19,13 @@ admin.autodiscover()
 
 urlpatterns = [
     # Examples:
-    url(r'^$', app.views.home, name='home'),
+    url(r'^development/$', app.views.home, name='home'),
+    url(r'^$', app.views.coming_soon, name='comingsoon'),
     url(r'^contact$', app.views.contact, name='contact'),
     url(r'^test', app.views.test, name='test'),
-    url(r'^cabinet', app.views.cabinet, name='cabinet'),
-    url(r'^registration', app.views.registration, name='registration'),
-    url(r'^login/$',
+    url(r'^development/cabinet', app.views.cabinet, name='cabinet'),
+    url(r'^development/registration', app.views.registration, name='registration'),
+    url(r'^development/login/$',
         django.contrib.auth.views.login,
         {
             'template_name': 'app/login.html',
@@ -47,15 +48,15 @@ urlpatterns = [
     # url(r'^admin/doc/', include('django.contrib.admindocs.urls')),
 
     # Uncomment the next line to enable the admin:
-    url(r'^admin/', include(admin.site.urls)),
-    url(r'^register/$', app.views.register, name='register'),
-    url(r'^edit/$', app.views.edit, name='edit'),
-    url(r'^activate/[0-9,a-z,-]{36}$', app.views.activate, name='activate'),
-    url(r'^changepass/[0-9,a-z,-]{72}$', app.views.change_password, name='change_password'),#redirect from email
-    url(r'^passchange_req/$', app.views.passchange_req, name='passchange_req'),#creating request in db and send email
-    url(r'^passchange/$', app.views.passchange, name='passchange'),#request to change pass for ajax in redirected email link
-    url(r'^emailusernamecheck/$', app.views.emailusernamecheck, name='emailusernamecheck'),#request to change pass for ajax in redirected email link
+    url(r'^development/admin/', include(admin.site.urls)),
+    url(r'^development/register/$', app.views.register, name='register'),
+    url(r'^development/edit/$', app.views.edit, name='edit'),
+    url(r'^development/activate/[0-9,a-z,-]{36}$', app.views.activate, name='activate'),
+    url(r'^development/changepass/[0-9,a-z,-]{72}$', app.views.change_password, name='change_password'),#redirect from email
+    url(r'^development/passchange_req/$', app.views.passchange_req, name='passchange_req'),#creating request in db and send email
+    url(r'^development/passchange/$', app.views.passchange, name='passchange'),#request to change pass for ajax in redirected email link
+    url(r'^development/emailusernamecheck/$', app.views.emailusernamecheck, name='emailusernamecheck'),#request to change pass for ajax in redirected email link
 ]
 
 urlpatterns += static(settings.STATIC_URL, document_root=settings.STATIC_ROOT)
-urlpatterns += static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT) 
+urlpatterns += static('development'+settings.MEDIA_URL, document_root=settings.MEDIA_ROOT) 
