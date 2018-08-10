@@ -6,6 +6,11 @@ input {
     padding-left: 735px;
     min-width: 1000px;
 }
+#custom_error1 {
+    position: absolute;
+    padding-left: 735px;
+    min-width: 1000px;
+}
 .error-my {
     padding-top: 5px !important;
     position: absolute;

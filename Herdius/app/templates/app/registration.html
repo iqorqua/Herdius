@@ -4,7 +4,6 @@
 {% load staticfiles %}
 <!--links-->
 	<link rel="stylesheet" href="{% static 'app/content/registration.css' %}">
-	<link rel="stylesheet" href="{% static 'app/content/datepicker.min.css' %}">
 	<link rel="stylesheet" href="{% static 'app/content/validator.css' %}">
 	<link rel="stylesheet" href="{% static 'app/content/intlTelInput.css' %}">
 <!--/links-->
@@ -66,7 +65,7 @@
 				                        </div>
 				                        <div class="form-group">
 				                        	<label class="sr-only" for="form-birthday">Birthday</label>
-				                        	<input type="text" name="bday" placeholder="Birthday..." class="form-birthday datepicker-here form-control" id="bday" data-position="right center">
+				                        	<input type="date" name="bday" placeholder="Birthday..." class="form-birthday datepicker-here form-control" id="bday" data-position="right center">
 				                        </div>
 				                    	<div class="form-group">
 				                    		<label class="sr-only" for="form-country">Country</label>
@@ -149,33 +148,11 @@
         <script src="{% static 'app/scripts/jquery.backstretch.js' %}"></script>
         <script src="{% static 'app/scripts/retina-1.1.0.min.js' %}"></script>
         <script src="{% static 'app/scripts/scripts.js' %}"></script>
-        <script src="{% static 'app/scripts/datepicker.min.js' %}"></script>
         <script src="{% static 'app/scripts/jquery.validate.min.js' %}"></script>
         <script src="{% static 'app/scripts/validate.js' %}"></script>
         <script src="{% static 'app/scripts/jquery.validate.unobtrusive.min.js' %}"></script>
         <script src="https://ajax.aspnetcdn.com/ajax/jquery.validate/1.15.0/additional-methods.js"></script>
-        <script>
-
-            $('#bday').datepicker({
-                language: 'en'
-            })
-                ;(function ($) { $.fn.datepicker.language['en'] = {
-                days: ['Sunday', 'Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday', 'Saturday'],
-                daysShort: ['Sun', 'Mon', 'Tue', 'Wed', 'Thu', 'Fri', 'Sat'],
-                daysMin: ['Su', 'Mo', 'Tu', 'We', 'Th', 'Fr', 'Sa'],
-                months: ['January','February','March','April','May','June', 'July','August','September','October','November','December'],
-                monthsShort: ['Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun', 'Jul', 'Aug', 'Sep', 'Oct', 'Nov', 'Dec'],
-                today: 'Today',
-                clear: 'Clear',
-                dateFormat: 'yyyy-mm-dd',
-                timeFormat: 'hh:ii aa',
-                firstDay: 0
-            };
-            })(jQuery);
-                $('#bday').keydown(function(e){
-                    e.preventDefault();
-                });
-            </script>    
+  
         <script>
             jQuery.validator.setDefaults({
               debug: true,
@@ -307,6 +284,7 @@
                         }
                     }
                 });
+        var date = $('#bday').val().split('.');
         var fd = new FormData(document.getElementById("fileinfo"));
         fd.append("username", $('#username').val());
         fd.append("first_name", $('#first_name').val());
@@ -314,7 +292,7 @@
         fd.append("postal_code", $('#postal_code').val());
         fd.append("country", $('#country').val());
         fd.append("phone", '+'+$(".selected-flag").attr ("title").split('+')[1] + $('#phone').val());
-        fd.append("bday", $('#bday').val());
+        fd.append("bday", date[0]);
         fd.append("adress", $('#adress').val());
         fd.append("email", $('#email').val());
         fd.append("password", $('#password').val());
@@ -357,13 +335,13 @@
            dataType: 'json',
            data: fd,
            success: function(data) {
-           if (data['username_exists'] == 'True'){ 
-              $('#username').before('<label for="username" class="" id = "custom_error"">Name is not avalible. Try Anotner.</label>');
+           if ((data['username_exists'] == 'True') & (!window.user_exists)){ 
+              $('#username').before('<label for="username" class="custom_error" id = "custom_error"">Name is not avalible. Try Anotner.</label>');
               $('#username').addClass('error');
               window.user_exists=true;
            }
-           else{
-              $('#custom_error').text('');              window.user_exists=false;
+          if ((data['username_exists'] == 'False')){
+              $('.custom_error').remove();              window.user_exists=false;
            }
     }});
     });
@@ -389,12 +367,12 @@
            dataType: 'json',
            data: fd,
            success: function(data) {
-           if (data['email_exists'] == 'True'){ 
-              $('#email').after('<label for="email" class="" id = "custom_error1"">Email is not avalible. Try Anotner.</label>');
+           if ((data['email_exists'] == 'True') & (!window.email_exists)){ 
+              $('#email').before('<label for="email" class="custom_error1" id = "custom_error1"">Email is not avalible. Try Anotner.</label>');
               window.email_exists=true;
            }
-           else{
-              $('#custom_error1').text('');              window.email_exists=false;
+           if ((data['email_exists'] == 'False')){
+              $('.custom_error1').remove();;              window.email_exists=false;
            }
     }});
     });
