@@ -41,12 +41,12 @@
                                 <form method="post" id="fileinfo" name="fileinfo" onsubmit="return submitForm();" class="registration-form">
                                         <input type="file"  class="form-control-file" name="avatar" id="avatar" required=""/>
                                 <p></p>
-                                    <img class="company-header-avatar " alt="avatar" id="pic_id" style="background-image:url('{{user.image_id}}')">
+                                    <img class="company-header " alt="avatar" id="pic_id" src="{{user.image_id}}">
                                 <p>Change id...</p>
                                         <input type="file"  class="form-control-file" name="picture_id" id="picture_id" required="" />
                                 </form>
                               </div>
-                                  <div class="panel panel-default">
+                              <!--    <div class="panel panel-default">
                                     <div class="panel-heading">Website <i class="fa fa-link fa-1x"></i></div>
                                     <div class="panel-body"><a href="http://bootnipets.com">bootnipets.com</a></div>
                                   </div>
@@ -64,7 +64,7 @@
                                     <div class="panel-body">
             	                        <i class="fa fa-facebook fa-2x"></i> <i class="fa fa-github fa-2x"></i> <i class="fa fa-twitter fa-2x"></i> <i class="fa fa-pinterest fa-2x"></i> <i class="fa fa-google-plus fa-2x"></i>
                                     </div>
-                                  </div>
+                                  </div>-->
                         </div>
                         <div class="col-md-8 col-md-offset-1">
                          <div >    
@@ -108,7 +108,9 @@
 				                        </div>          
                               </form>
 				                        </div>
-				             <button type="button"  id="save" class="btn">Save</button>
+                            <div style="width: 55%; float: right;">
+				               <button type="button"  id="save" class="btn btn-primary">Save</button>
+                            </div>
 				         </div>
                         </div>
                     </div>

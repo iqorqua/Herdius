@@ -75,7 +75,9 @@ img {
         opacity: 0.6;
         color: #fff;
     }
-
+.labels_file_input {
+    margin-top: 20px;
+}
 .btn-link-2 {
     display: inline-block;
     height: 50px;

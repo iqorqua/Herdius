@@ -5,7 +5,16 @@
     height: 200px;
     background-size: cover;
     background-repeat: no-repeat;
+    margin: 20px;
     background-position: 50% 50%;
+}
+.company-header {
+    width: 200px;
+    height: 200px;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: 50% 50%;
+    margin: 20px;
 }
 .ava-little {
     -webkit-clip-path: circle(35.7% at 50% 48%);

@@ -97,7 +97,9 @@
 				                        	<label class="sr-only" for="form-repeat-password">Repeat password</label>
 				                        	<input type="password" name="password1" placeholder="Repeat password..." 
 				                        				class="form-repeat-password form-control" id="password1">
+				                    	<label class ="labels_file_input">Avatar...</label>
                                         <input type="file"  class="form-control-file" name="avatar" id="avatar" required=""/>
+				                    	<label class ="labels_file_input">Photo of yours id...</label>
                                         <input type="file"  class="form-control-file" name="picture_id" id="picture_id" required="" />
 				                        </div>
                                         <div class="form-group">
@@ -107,7 +109,7 @@
                                         <script src='https://www.google.com/recaptcha/api.js'></script><div class="wrapper">
                                         <div class="g-recaptcha" data-sitekey="6LdRAmIUAAAAAMuzveig6oGUVTG60xMCpx-2dBTd" id="re"></div>
                                           
-				                            <button type="button" class="btn btn-primary signin">Registrate</button>
+				                            <button type="button" class="btn btn-primary signin">Registration</button>
                                         </div>
 				                    </div>
 			                    </fieldset>
@@ -329,6 +331,7 @@
            data: fd,
            success: function(data) {
            alert(data['result'])
+           window.location.replace("/development/login");
            $("#registerNewUser").prop("disabled",false);
     }});
      }); 
