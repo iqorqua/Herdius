@@ -148,7 +148,7 @@ def register(request):
                    print(e)
                    result = str(e)
                    return JsonResponse({'result': result})
-                result = 'Succsessfully created! \nCheck your email, please'
+                result = 'Succsessfully created! \nYou need to validate your account. So check your email, please!'
                 app.email_component.send_email_async(user)
                 return JsonResponse({'result': result})
             except Exception as e:

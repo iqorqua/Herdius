@@ -145,6 +145,7 @@
     <Content Include="app\templates\app\cabinet.html" />
     <Content Include="app\templates\app\footer.html" />
     <Content Include="app\templates\app\comingSoon.html" />
+    <Content Include="app\templates\app\login_with_remind.html" />
     <Content Include="app\templates\app\registration.html" />
     <Content Include="requirements.txt" />
     <Content Include="db.sqlite3" />

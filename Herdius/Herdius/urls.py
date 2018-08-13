@@ -38,6 +38,19 @@ urlpatterns = [
             } 
         },
         name='login'),
+    url(r'^development/login_remind/$',
+        django.contrib.auth.views.login,
+        {
+            'template_name': 'app/login_with_remind.html',
+            'authentication_form': app.forms.BootstrapAuthenticationForm,
+            'extra_context':
+            {
+                'title': 'Log in',
+                'year': datetime.now().year,
+                'next': getattr(settings, "LOGIN_REDIRECT_URL", None),
+            } 
+        },
+        name='login_remind'),
     url(r'^logout$',
         django.contrib.auth.views.logout,
         {
